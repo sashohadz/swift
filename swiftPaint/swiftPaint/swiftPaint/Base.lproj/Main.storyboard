@@ -65,7 +65,7 @@
                                     <constraint firstItem="8hP-bH-Age" firstAttribute="centerX" secondItem="jhX-Eg-dSJ" secondAttribute="centerX" id="tHR-VP-Vm3"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="size" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-SW-RdO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="size" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-SW-RdO">
                                 <rect key="frame" x="67" y="518" width="42" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.063397998546628642" green="0.16942601928817747" blue="1" alpha="1" colorSpace="calibratedRGB"/>

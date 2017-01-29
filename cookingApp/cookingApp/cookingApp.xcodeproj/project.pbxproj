@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A572F9E21E3E3E9D00AEE32C /* airan.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9D71E3E3E9D00AEE32C /* airan.png */; };
+		A572F9E31E3E3E9D00AEE32C /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9D81E3E3E9D00AEE32C /* chicken.png */; };
+		A572F9E41E3E3E9D00AEE32C /* dummy.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9D91E3E3E9D00AEE32C /* dummy.png */; };
+		A572F9E51E3E3E9D00AEE32C /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DA1E3E3E9D00AEE32C /* fish.png */; };
+		A572F9E61E3E3E9D00AEE32C /* ice.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DB1E3E3E9D00AEE32C /* ice.png */; };
+		A572F9E71E3E3E9D00AEE32C /* krem.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DC1E3E3E9D00AEE32C /* krem.png */; };
+		A572F9E81E3E3E9D00AEE32C /* musaka.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DD1E3E3E9D00AEE32C /* musaka.png */; };
+		A572F9E91E3E3E9D00AEE32C /* pyrjenitsa.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DE1E3E3E9D00AEE32C /* pyrjenitsa.png */; };
+		A572F9EA1E3E3E9D00AEE32C /* shopska.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9DF1E3E3E9D00AEE32C /* shopska.png */; };
+		A572F9EB1E3E3E9D00AEE32C /* Tarator.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9E01E3E3E9D00AEE32C /* Tarator.png */; };
+		A572F9EC1E3E3E9D00AEE32C /* tikvi.png in Resources */ = {isa = PBXBuildFile; fileRef = A572F9E11E3E3E9D00AEE32C /* tikvi.png */; };
+		A572F9EF1E3E4B5800AEE32C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A572F9EE1E3E4B5800AEE32C /* DetailViewController.swift */; };
+		A5A8D99C1E3CE74200F71818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8D99B1E3CE74200F71818 /* AppDelegate.swift */; };
+		A5A8D9A11E3CE74200F71818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A8D99F1E3CE74200F71818 /* Main.storyboard */; };
+		A5A8D9A31E3CE74200F71818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A8D9A21E3CE74200F71818 /* Assets.xcassets */; };
+		A5A8D9A61E3CE74200F71818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5A8D9A41E3CE74200F71818 /* LaunchScreen.storyboard */; };
+		A5A8D9AE1E3CE7DA00F71818 /* CookingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A8D9AD1E3CE7DA00F71818 /* CookingTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A572F9D71E3E3E9D00AEE32C /* airan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airan.png; sourceTree = "<group>"; };
+		A572F9D81E3E3E9D00AEE32C /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		A572F9D91E3E3E9D00AEE32C /* dummy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dummy.png; sourceTree = "<group>"; };
+		A572F9DA1E3E3E9D00AEE32C /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		A572F9DB1E3E3E9D00AEE32C /* ice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ice.png; sourceTree = "<group>"; };
+		A572F9DC1E3E3E9D00AEE32C /* krem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = krem.png; sourceTree = "<group>"; };
+		A572F9DD1E3E3E9D00AEE32C /* musaka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musaka.png; sourceTree = "<group>"; };
+		A572F9DE1E3E3E9D00AEE32C /* pyrjenitsa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pyrjenitsa.png; sourceTree = "<group>"; };
+		A572F9DF1E3E3E9D00AEE32C /* shopska.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shopska.png; sourceTree = "<group>"; };
+		A572F9E01E3E3E9D00AEE32C /* Tarator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tarator.png; sourceTree = "<group>"; };
+		A572F9E11E3E3E9D00AEE32C /* tikvi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tikvi.png; sourceTree = "<group>"; };
+		A572F9EE1E3E4B5800AEE32C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A5A8D9981E3CE74200F71818 /* cookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5A8D99B1E3CE74200F71818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A5A8D9A01E3CE74200F71818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5A8D9A21E3CE74200F71818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A5A8D9A51E3CE74200F71818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A5A8D9A71E3CE74200F71818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5A8D9AD1E3CE7DA00F71818 /* CookingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookingTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5A8D9951E3CE74200F71818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A572F9ED1E3E3EB100AEE32C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A572F9D71E3E3E9D00AEE32C /* airan.png */,
+				A572F9D81E3E3E9D00AEE32C /* chicken.png */,
+				A572F9D91E3E3E9D00AEE32C /* dummy.png */,
+				A572F9DA1E3E3E9D00AEE32C /* fish.png */,
+				A572F9DB1E3E3E9D00AEE32C /* ice.png */,
+				A572F9DC1E3E3E9D00AEE32C /* krem.png */,
+				A572F9DD1E3E3E9D00AEE32C /* musaka.png */,
+				A572F9DE1E3E3E9D00AEE32C /* pyrjenitsa.png */,
+				A572F9DF1E3E3E9D00AEE32C /* shopska.png */,
+				A572F9E01E3E3E9D00AEE32C /* Tarator.png */,
+				A572F9E11E3E3E9D00AEE32C /* tikvi.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		A5A8D98F1E3CE74200F71818 = {
+			isa = PBXGroup;
+			children = (
+				A5A8D99A1E3CE74200F71818 /* cookingApp */,
+				A5A8D9991E3CE74200F71818 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5A8D9991E3CE74200F71818 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5A8D9981E3CE74200F71818 /* cookingApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5A8D99A1E3CE74200F71818 /* cookingApp */ = {
+			isa = PBXGroup;
+			children = (
+				A5A8D99B1E3CE74200F71818 /* AppDelegate.swift */,
+				A5A8D9AD1E3CE7DA00F71818 /* CookingTableViewController.swift */,
+				A572F9EE1E3E4B5800AEE32C /* DetailViewController.swift */,
+				A5A8D99F1E3CE74200F71818 /* Main.storyboard */,
+				A5A8D9A41E3CE74200F71818 /* LaunchScreen.storyboard */,
+				A5A8D9A21E3CE74200F71818 /* Assets.xcassets */,
+				A5A8D9A71E3CE74200F71818 /* Info.plist */,
+				A572F9ED1E3E3EB100AEE32C /* Images */,
+			);
+			path = cookingApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5A8D9971E3CE74200F71818 /* cookingApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5A8D9AA1E3CE74200F71818 /* Build configuration list for PBXNativeTarget "cookingApp" */;
+			buildPhases = (
+				A5A8D9941E3CE74200F71818 /* Sources */,
+				A5A8D9951E3CE74200F71818 /* Frameworks */,
+				A5A8D9961E3CE74200F71818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cookingApp;
+			productName = cookingApp;
+			productReference = A5A8D9981E3CE74200F71818 /* cookingApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5A8D9901E3CE74200F71818 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Sasho Hadzhiev";
+				TargetAttributes = {
+					A5A8D9971E3CE74200F71818 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 28ND8Z4YSN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A5A8D9931E3CE74200F71818 /* Build configuration list for PBXProject "cookingApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5A8D98F1E3CE74200F71818;
+			productRefGroup = A5A8D9991E3CE74200F71818 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5A8D9971E3CE74200F71818 /* cookingApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5A8D9961E3CE74200F71818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A8D9A61E3CE74200F71818 /* LaunchScreen.storyboard in Resources */,
+				A5A8D9A31E3CE74200F71818 /* Assets.xcassets in Resources */,
+				A572F9E71E3E3E9D00AEE32C /* krem.png in Resources */,
+				A572F9E81E3E3E9D00AEE32C /* musaka.png in Resources */,
+				A5A8D9A11E3CE74200F71818 /* Main.storyboard in Resources */,
+				A572F9E91E3E3E9D00AEE32C /* pyrjenitsa.png in Resources */,
+				A572F9EB1E3E3E9D00AEE32C /* Tarator.png in Resources */,
+				A572F9E61E3E3E9D00AEE32C /* ice.png in Resources */,
+				A572F9E21E3E3E9D00AEE32C /* airan.png in Resources */,
+				A572F9E51E3E3E9D00AEE32C /* fish.png in Resources */,
+				A572F9E41E3E3E9D00AEE32C /* dummy.png in Resources */,
+				A572F9EC1E3E3E9D00AEE32C /* tikvi.png in Resources */,
+				A572F9E31E3E3E9D00AEE32C /* chicken.png in Resources */,
+				A572F9EA1E3E3E9D00AEE32C /* shopska.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5A8D9941E3CE74200F71818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A572F9EF1E3E4B5800AEE32C /* DetailViewController.swift in Sources */,
+				A5A8D9AE1E3CE7DA00F71818 /* CookingTableViewController.swift in Sources */,
+				A5A8D99C1E3CE74200F71818 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A5A8D99F1E3CE74200F71818 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A8D9A01E3CE74200F71818 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5A8D9A41E3CE74200F71818 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5A8D9A51E3CE74200F71818 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5A8D9A81E3CE74200F71818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A5A8D9A91E3CE74200F71818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5A8D9AB1E3CE74200F71818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28ND8Z4YSN;
+				INFOPLIST_FILE = cookingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourse.cookingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A5A8D9AC1E3CE74200F71818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28ND8Z4YSN;
+				INFOPLIST_FILE = cookingApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourse.cookingApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5A8D9931E3CE74200F71818 /* Build configuration list for PBXProject "cookingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A8D9A81E3CE74200F71818 /* Debug */,
+				A5A8D9A91E3CE74200F71818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5A8D9AA1E3CE74200F71818 /* Build configuration list for PBXNativeTarget "cookingApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5A8D9AB1E3CE74200F71818 /* Debug */,
+				A5A8D9AC1E3CE74200F71818 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5A8D9901E3CE74200F71818 /* Project object */;
+}

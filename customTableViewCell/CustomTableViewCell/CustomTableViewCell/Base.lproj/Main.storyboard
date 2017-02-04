@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d8a-Pc-IjA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="YOO-VU-MuB">
+            <objects>
+                <tableViewController storyboardIdentifier="PodTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sDD-p6-tB3" customClass="PodTableViewController" customModule="CustomTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="92" sectionHeaderHeight="28" sectionFooterHeight="28" id="bBh-8I-s3f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PodTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PodTableViewCellIdentifier" rowHeight="90" id="0qU-89-ad2" customClass="PodTableViewCell" customModule="CustomTableViewCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0qU-89-ad2" id="J5q-wb-MH7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leanplum.png" translatesAutoresizingMaskIntoConstraints="NO" id="8XG-Jp-9sd">
+                                            <rect key="frame" x="8" y="14" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="1A9-pJ-xyR"/>
+                                                <constraint firstAttribute="height" constant="60" id="2Ql-fN-rrE"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pod name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdw-5D-jpe">
+                                            <rect key="frame" x="76" y="18" width="200" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="4Gx-4w-6hV"/>
+                                                <constraint firstAttribute="height" constant="22" id="WaF-Bd-Hgd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pod detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HfD-5d-OHL">
+                                            <rect key="frame" x="76" y="48" width="200" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="ZGU-UL-8VN"/>
+                                                <constraint firstAttribute="width" constant="200" id="h72-u8-Yqa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqd-Du-lfs">
+                                            <rect key="frame" x="336" y="25" width="31" height="39"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="39" id="87l-sA-xli"/>
+                                                <constraint firstAttribute="width" constant="31" id="gB0-qM-adf"/>
+                                            </constraints>
+                                            <state key="normal" image="Image"/>
+                                            <state key="selected" image="Image">
+                                                <color key="titleColor" red="0.0" green="0.2994697368" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" red="0.063397998550000001" green="0.16942601930000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="bookmarkSelected:" destination="0qU-89-ad2" eventType="touchUpInside" id="GI7-9l-c3o"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8XG-Jp-9sd" firstAttribute="centerY" secondItem="J5q-wb-MH7" secondAttribute="centerY" id="Zvd-9q-RrJ"/>
+                                        <constraint firstItem="8XG-Jp-9sd" firstAttribute="leading" secondItem="J5q-wb-MH7" secondAttribute="leadingMargin" id="ZyZ-ne-9Y0"/>
+                                        <constraint firstItem="qdw-5D-jpe" firstAttribute="leading" secondItem="8XG-Jp-9sd" secondAttribute="trailing" constant="8" id="afd-ju-O6I"/>
+                                        <constraint firstItem="Oqd-Du-lfs" firstAttribute="centerY" secondItem="J5q-wb-MH7" secondAttribute="centerY" id="eeH-vX-DIu"/>
+                                        <constraint firstItem="Oqd-Du-lfs" firstAttribute="trailing" secondItem="J5q-wb-MH7" secondAttribute="trailingMargin" id="fbr-vV-FP6"/>
+                                        <constraint firstItem="HfD-5d-OHL" firstAttribute="top" secondItem="qdw-5D-jpe" secondAttribute="bottom" constant="8" id="txT-v8-Wed"/>
+                                        <constraint firstItem="HfD-5d-OHL" firstAttribute="leading" secondItem="qdw-5D-jpe" secondAttribute="leading" id="vNE-qw-2tx"/>
+                                        <constraint firstItem="qdw-5D-jpe" firstAttribute="top" secondItem="J5q-wb-MH7" secondAttribute="topMargin" constant="10" id="xNU-HF-dSF"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bookmarkButton" destination="Oqd-Du-lfs" id="LaE-5f-E9D"/>
+                                    <outlet property="podDetailLabel" destination="HfD-5d-OHL" id="4rm-Ft-QC9"/>
+                                    <outlet property="podImageView" destination="8XG-Jp-9sd" id="dkm-Ki-XEO"/>
+                                    <outlet property="podNameLabel" destination="qdw-5D-jpe" id="mI3-nE-3hz"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sDD-p6-tB3" id="IbS-j9-Nu5"/>
+                            <outlet property="delegate" destination="sDD-p6-tB3" id="PSh-tg-F7s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="B3n-RL-sdn"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WGx-9N-2ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565.60000000000002" y="103.89805097451276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OKJ-BV-1rx">
+            <objects>
+                <navigationController id="d8a-Pc-IjA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PS5-dH-2rf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sDD-p6-tB3" kind="relationship" relationship="rootViewController" id="kXt-qj-6E4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3y-oI-HGV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="27" height="27"/>
+        <image name="leanplum.png" width="60" height="60"/>
+    </resources>
+</document>

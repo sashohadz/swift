@@ -5,7 +5,6 @@
 //  Created by Sasho Hadzhiev on 2/4/17.
 //  Copyright © 2017 Sasho Hadzhiev. All rights reserved.
 //
-
 import UIKit
 
 enum podsDataType{
@@ -45,8 +44,8 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = self.podsData[indexPath.row]
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PodTableViewCellIdentifier", for: indexPath) as! PodTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PodTableViewCellIdentifier",
+                                                 for: indexPath) as! PodTableViewCell
         cell.podNameLabel.text = data[.podName]
         cell.podDetailLabel.text = data[.podDescription]
         cell.podImageView.image = UIImage(named: data[.podImage]!)

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 enum podsDataType{
     case podImage, podName, podLink, podDescription, isBookmarked
 }
@@ -43,7 +42,6 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
         return self.podsData.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let data = self.podsData[indexPath.row]
@@ -54,7 +52,6 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
         cell.podImageView.image = UIImage(named: data[.podImage]!)
         return cell
     }
-    
     
     func didPressBookmarkButton(inCell:PodTableViewCell) {
         inCell.isBookmarked = !inCell.isBookmarked

@@ -18,18 +18,16 @@ class PodTableViewCell: UITableViewCell {
     @IBOutlet weak var podNameLabel: UILabel!
     @IBOutlet weak var podDetailLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
-    
     var delegate: PodsTableViewCellDelegate?
     
-    var isBookmarked:Bool! = false{
+    var isBookmarked:Bool! = false {
         didSet{
-            switch isBookmarked{
+            switch isBookmarked {
             case true:
                 self.podImageView.layer.borderWidth = 4.0
                 self.podImageView.layer.borderColor = UIColor.yellow.cgColor
             case false:
                 self.podImageView.layer.borderWidth = 0.0
-
             default:
                 break
             }
@@ -40,7 +38,6 @@ class PodTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.podImageView.layer.cornerRadius = self.podImageView.frame.width / 2
         self.bookmarkButton.isSelected = false
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -7,27 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A584E6861E4778F3001C90DF /* bookmarkSetDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = A584E6851E4778F3001C90DF /* bookmarkSetDefault.png */; };
+		A584E6881E477900001C90DF /* bookmarkSet.png in Resources */ = {isa = PBXBuildFile; fileRef = A584E6871E477900001C90DF /* bookmarkSet.png */; };
+		A584E68A1E478275001C90DF /* dynamicButton.png in Resources */ = {isa = PBXBuildFile; fileRef = A584E6891E478275001C90DF /* dynamicButton.png */; };
 		A58B4B431E46223000BF4305 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B4B421E46223000BF4305 /* AppDelegate.swift */; };
 		A58B4B481E46223000BF4305 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58B4B461E46223000BF4305 /* Main.storyboard */; };
 		A58B4B4A1E46223000BF4305 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58B4B491E46223000BF4305 /* Assets.xcassets */; };
 		A58B4B4D1E46223000BF4305 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58B4B4B1E46223000BF4305 /* LaunchScreen.storyboard */; };
-		A58B4B591E46255100BF4305 /* bookmark.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B4B581E46255100BF4305 /* bookmark.png */; };
 		A58B4B5B1E462A6300BF4305 /* PodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B4B5A1E462A6300BF4305 /* PodTableViewController.swift */; };
 		A58B4B5D1E462A9700BF4305 /* PodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58B4B5C1E462A9700BF4305 /* PodTableViewCell.swift */; };
 		A58B4B5F1E46308D00BF4305 /* leanplum.png in Resources */ = {isa = PBXBuildFile; fileRef = A58B4B5E1E46308D00BF4305 /* leanplum.png */; };
+		A5AAC6F01E478BE200BC5925 /* PodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5AAC6EF1E478BE200BC5925 /* PodDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A584E6851E4778F3001C90DF /* bookmarkSetDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarkSetDefault.png; sourceTree = "<group>"; };
+		A584E6871E477900001C90DF /* bookmarkSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarkSet.png; sourceTree = "<group>"; };
+		A584E6891E478275001C90DF /* dynamicButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dynamicButton.png; sourceTree = "<group>"; };
 		A58B4B3F1E46223000BF4305 /* CustomTableViewCell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableViewCell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58B4B421E46223000BF4305 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58B4B471E46223000BF4305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A58B4B491E46223000BF4305 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58B4B4C1E46223000BF4305 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58B4B4E1E46223000BF4305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A58B4B581E46255100BF4305 /* bookmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmark.png; sourceTree = "<group>"; };
 		A58B4B5A1E462A6300BF4305 /* PodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodTableViewController.swift; sourceTree = "<group>"; };
 		A58B4B5C1E462A9700BF4305 /* PodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodTableViewCell.swift; sourceTree = "<group>"; };
 		A58B4B5E1E46308D00BF4305 /* leanplum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leanplum.png; sourceTree = "<group>"; };
+		A5AAC6EF1E478BE200BC5925 /* PodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +69,15 @@
 				A58B4B421E46223000BF4305 /* AppDelegate.swift */,
 				A58B4B5A1E462A6300BF4305 /* PodTableViewController.swift */,
 				A58B4B5C1E462A9700BF4305 /* PodTableViewCell.swift */,
+				A5AAC6EF1E478BE200BC5925 /* PodDetailViewController.swift */,
 				A58B4B461E46223000BF4305 /* Main.storyboard */,
 				A58B4B491E46223000BF4305 /* Assets.xcassets */,
 				A58B4B4B1E46223000BF4305 /* LaunchScreen.storyboard */,
 				A58B4B4E1E46223000BF4305 /* Info.plist */,
-				A58B4B581E46255100BF4305 /* bookmark.png */,
+				A584E6851E4778F3001C90DF /* bookmarkSetDefault.png */,
+				A584E6871E477900001C90DF /* bookmarkSet.png */,
 				A58B4B5E1E46308D00BF4305 /* leanplum.png */,
+				A584E6891E478275001C90DF /* dynamicButton.png */,
 			);
 			path = CustomTableViewCell;
 			sourceTree = "<group>";
@@ -133,9 +142,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A584E6881E477900001C90DF /* bookmarkSet.png in Resources */,
 				A58B4B4D1E46223000BF4305 /* LaunchScreen.storyboard in Resources */,
-				A58B4B591E46255100BF4305 /* bookmark.png in Resources */,
+				A584E6861E4778F3001C90DF /* bookmarkSetDefault.png in Resources */,
 				A58B4B5F1E46308D00BF4305 /* leanplum.png in Resources */,
+				A584E68A1E478275001C90DF /* dynamicButton.png in Resources */,
 				A58B4B4A1E46223000BF4305 /* Assets.xcassets in Resources */,
 				A58B4B481E46223000BF4305 /* Main.storyboard in Resources */,
 			);
@@ -149,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58B4B431E46223000BF4305 /* AppDelegate.swift in Sources */,
+				A5AAC6F01E478BE200BC5925 /* PodDetailViewController.swift in Sources */,
 				A58B4B5B1E462A6300BF4305 /* PodTableViewController.swift in Sources */,
 				A58B4B5D1E462A9700BF4305 /* PodTableViewCell.swift in Sources */,
 			);
@@ -314,6 +326,7 @@
 				A58B4B531E46223000BF4305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--List of pods-->
         <scene sceneID="YOO-VU-MuB">
             <objects>
                 <tableViewController storyboardIdentifier="PodTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sDD-p6-tB3" customClass="PodTableViewController" customModule="CustomTableViewCell" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="sDD-p6-tB3" id="PSh-tg-F7s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="B3n-RL-sdn"/>
+                    <navigationItem key="navigationItem" title="List of pods" id="B3n-RL-sdn"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WGx-9N-2ci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -128,6 +128,15 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAq-n2-via">
+                                <rect key="frame" x="62" y="449" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="link"/>
+                                <connections>
+                                    <action selector="linkButtonPressed:" destination="17p-kk-Xeh" eventType="touchUpInside" id="v5A-fF-Rah"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,6 +147,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="linkButton" destination="wAq-n2-via" id="9x4-6f-jkH"/>
                         <outlet property="podDetailsLabel" destination="K7S-Ar-TkR" id="mba-lx-Y70"/>
                         <outlet property="podNameLabel" destination="2Mx-AH-4Vr" id="g5b-0G-NhY"/>
                     </connections>

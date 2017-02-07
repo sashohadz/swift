@@ -19,16 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
+    var profileImage = LPVar.define("profileImage", withFile: "plum")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         #if DEBUG
             Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
-            Leanplum.setAppId("your app_ key",
-                              withDevelopmentKey:"your dev_ key")
+            Leanplum.setAppId("app_ key",
+                              withDevelopmentKey:"dev_ key")
         #else
-            Leanplum.setAppId("your app_ key",
-                              withProductionKey: "your prod_ key")
+            Leanplum.setAppId("app_ key",
+                              withProductionKey: "prod_ key")
         #endif
         
         Leanplum.setVerboseLoggingInDevelopmentMode(true)

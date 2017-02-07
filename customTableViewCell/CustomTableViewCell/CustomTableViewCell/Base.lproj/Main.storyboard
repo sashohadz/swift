@@ -53,8 +53,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqd-Du-lfs">
-                                            <rect key="frame" x="330" y="25" width="31" height="39"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqd-Du-lfs">
+                                            <rect key="frame" x="326" y="25" width="31" height="39"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="39" id="87l-sA-xli"/>
                                                 <constraint firstAttribute="width" constant="31" id="gB0-qM-adf"/>
@@ -67,7 +67,7 @@
                                         </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Oqd-Du-lfs" secondAttribute="trailing" constant="6" id="NaG-dZ-f9u"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Oqd-Du-lfs" secondAttribute="trailing" constant="10" id="NaG-dZ-f9u"/>
                                         <constraint firstItem="8XG-Jp-9sd" firstAttribute="centerY" secondItem="J5q-wb-MH7" secondAttribute="centerY" id="Zvd-9q-RrJ"/>
                                         <constraint firstItem="8XG-Jp-9sd" firstAttribute="leading" secondItem="J5q-wb-MH7" secondAttribute="leadingMargin" id="ZyZ-ne-9Y0"/>
                                         <constraint firstItem="qdw-5D-jpe" firstAttribute="leading" secondItem="8XG-Jp-9sd" secondAttribute="trailing" constant="8" id="afd-ju-O6I"/>
@@ -232,6 +232,13 @@
                                     <action selector="loginButtonPressed:" destination="mP7-tK-mbF" eventType="touchUpInside" id="lia-YU-u0k"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y1R-UO-Qqv">
+                                <rect key="frame" x="137" y="136" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="N8h-nS-GJV"/>
+                                    <constraint firstAttribute="width" constant="100" id="Nqy-NJ-lTM"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -241,6 +248,8 @@
                             <constraint firstItem="MfG-th-Rcq" firstAttribute="centerX" secondItem="VTL-lk-WzQ" secondAttribute="centerX" id="LIl-LZ-7Kb"/>
                             <constraint firstItem="kfD-x4-liu" firstAttribute="top" secondItem="qgr-Bk-3fA" secondAttribute="bottom" constant="55" id="WOb-gJ-r4n"/>
                             <constraint firstItem="kfD-x4-liu" firstAttribute="centerX" secondItem="VTL-lk-WzQ" secondAttribute="centerX" id="XRf-cc-P1b"/>
+                            <constraint firstItem="y1R-UO-Qqv" firstAttribute="centerX" secondItem="VTL-lk-WzQ" secondAttribute="centerX" id="fB1-Tw-wOu"/>
+                            <constraint firstItem="MfG-th-Rcq" firstAttribute="top" secondItem="y1R-UO-Qqv" secondAttribute="bottom" constant="25" id="pqX-sn-i2J"/>
                             <constraint firstItem="6s2-hi-4aY" firstAttribute="centerX" secondItem="VTL-lk-WzQ" secondAttribute="centerX" id="u8t-9g-ehe"/>
                             <constraint firstItem="qgr-Bk-3fA" firstAttribute="top" secondItem="6s2-hi-4aY" secondAttribute="bottom" constant="44" id="wg3-Tr-hlp"/>
                         </constraints>
@@ -248,6 +257,7 @@
                     <connections>
                         <outlet property="loginButton" destination="qgr-Bk-3fA" id="rEP-1h-0wn"/>
                         <outlet property="loginDetailslabel" destination="MfG-th-Rcq" id="M7O-bX-NNO"/>
+                        <outlet property="profileImageView" destination="y1R-UO-Qqv" id="wXz-uR-SdW"/>
                         <outlet property="resultLabel" destination="kfD-x4-liu" id="okm-fz-l12"/>
                         <outlet property="userNameTextField" destination="6s2-hi-4aY" id="g0c-fq-jhm"/>
                     </connections>

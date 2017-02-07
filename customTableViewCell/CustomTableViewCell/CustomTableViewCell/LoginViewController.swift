@@ -7,17 +7,19 @@
 //
 
 import UIKit
+import Leanplum
 
 enum UserCheckResult{
     case OK, Short, Empty
 }
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var loginDetailslabel: UILabel!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +29,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.resultLabel.isHidden = true
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.profileImageView.image = appDelegate.profileImage?.imageValue()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -41,7 +44,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     func checkUser() -> UserCheckResult {
         guard self.userNameTextField.text != nil else {return .Empty}
-    
         if self.userNameTextField.text!.characters.count < 3 {
             return .Short
         }
@@ -62,6 +64,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.resultLabel.textColor = UIColor.red
             self.resultLabel.text = "Username too short"
         }
+        
         self.resultLabel.isHidden = false
     }
     

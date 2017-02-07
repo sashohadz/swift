@@ -6,6 +6,7 @@
 //  Copyright © 2017 Sasho Hadzhiev. All rights reserved.
 //
 import UIKit
+import Leanplum
 
 enum podsDataType{
     case podImage, podName, neededTime, podDescription, isBookmarked
@@ -65,6 +66,16 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
         cell.podImageView.image = UIImage(named: data[.podImage]!)
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as! PodTableViewCell
+        let selectedCellLabelName = selectedCell.podNameLabel.text
+        print("Track Selected Meal with param: \(selectedCellLabelName ?? "")")
+        let dishName = ["Dish name":selectedCellLabelName!]
+        Leanplum.track("Selected Meal", withParameters: dishName)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
     
     func didPressBookmarkButton(inCell:PodTableViewCell) {
         inCell.isBookmarked = !inCell.isBookmarked

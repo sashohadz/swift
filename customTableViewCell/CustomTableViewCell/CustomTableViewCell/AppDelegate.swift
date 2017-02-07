@@ -7,15 +7,32 @@
 //
 
 import UIKit
+import Foundation
+#if DEBUG
+    import AdSupport
+#endif
+import Leanplum
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        #if DEBUG
+            Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+            Leanplum.setAppId("your app_ key",
+                              withDevelopmentKey:"your dev_ key")
+        #else
+            Leanplum.setAppId("your app_ key",
+                              withProductionKey: "your prod_ key")
+        #endif
+        
+        Leanplum.setVerboseLoggingInDevelopmentMode(true)
+        Leanplum.start()
         return true
     }
 

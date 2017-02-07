@@ -12,7 +12,9 @@ class PodDetailViewController: UIViewController {
 
     @IBOutlet weak var podNameLabel: UILabel!
     @IBOutlet weak var podDetailsLabel: UILabel!
-    @IBOutlet weak var linkButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var timeLabel: UILabel!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +22,5 @@ class PodDetailViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    @IBAction func linkButtonPressed(_ sender: UIButton) {
-        let url = NSURL(string: linkButton.currentTitle!)!
-        UIApplication.shared.openURL(url as URL)
     }
 }

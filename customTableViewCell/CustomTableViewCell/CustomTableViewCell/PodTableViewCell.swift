@@ -18,6 +18,7 @@ class PodTableViewCell: UITableViewCell {
     @IBOutlet weak var podNameLabel: UILabel!
     @IBOutlet weak var podDetailLabel: UILabel!
     @IBOutlet weak var bookmarkButton: UIButton!
+    
     var delegate: PodsTableViewCellDelegate?
     
     var isBookmarked:Bool! = false {

@@ -8,22 +8,36 @@
 import UIKit
 
 enum podsDataType{
-    case podImage, podName, podLink, podDescription, isBookmarked
+    case podImage, podName, neededTime, podDescription, isBookmarked
 }
 
 class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
 
     let podsData:[[podsDataType:String]] = [
-        [.podImage:"leanplum.png",
-         .podName:"Leanplum",
-         .podLink:"https://cocoapods.org/pods/Leanplum-iOS-SDK",
-         .podDescription:"Messaging, Automation, App Editing, Personalization, A/B Testing, and Analytics",
-         .isBookmarked:"false"],
-        [.podImage:"dynamicButton.png",
-         .podName:"DynamicButton",
-         .podLink:"https://cocoapods.org/pods/DynamicButton",
-         .podDescription:"Flat design button written in Swift",
-         .isBookmarked:"false"]]
+        [.podImage:"Tarator",
+         .podName:"Tarator",
+         .neededTime:"10 min",
+         .podDescription:"300 ml water\n300 ml youghurt\n1 cucumber"],
+        [.podImage:"airan",
+         .podName:"Airan",
+         .neededTime:"5 min",
+         .podDescription:"300 ml water\n300 ml youghurt"],
+        [.podImage:"fish",
+         .podName:"Fish",
+         .neededTime:"50 min",
+         .podDescription:"500 gr sea salt\n1 fish"],
+        [.podImage:"chicken",
+         .podName:"Chicken",
+         .neededTime:"55 min",
+         .podDescription:"500 gr sea salt\n1 chicken"],
+        [.podImage:"musaka",
+         .podName:"Musaka",
+         .neededTime:"60 min",
+         .podDescription:"5400 gr potatos\n400 gr kaima, salt"],
+        [.podImage:"krem",
+         .podName:"krem karamel",
+         .neededTime:"35 min",
+         .podDescription:"Krem Karamel\nI have no idea how to cook it. :))"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +61,7 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PodTableViewCellIdentifier",
                                                  for: indexPath) as! PodTableViewCell
         cell.podNameLabel.text = data[.podName]
-        cell.podDetailLabel.text = data[.podDescription]
+        cell.podDetailLabel.text = data[.neededTime]
         cell.podImageView.image = UIImage(named: data[.podImage]!)
         return cell
     }
@@ -59,11 +73,12 @@ class PodTableViewController: UITableViewController, PodsTableViewCellDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is PodDetailViewController{
             let destination = segue.destination as! PodDetailViewController
+            let imageName = self.podsData[self.tableView.indexPathForSelectedRow!.row][.podImage]
             destination.loadViewIfNeeded()
             destination.podNameLabel.text = self.podsData[self.tableView.indexPathForSelectedRow!.row][.podName]
             destination.podDetailsLabel.text = self.podsData[self.tableView.indexPathForSelectedRow!.row][.podDescription]
-            let buttonTitle = self.podsData[self.tableView.indexPathForSelectedRow!.row][.podLink]
-            destination.linkButton.setTitle(buttonTitle, for: UIControlState.normal)
+            destination.detailImageView.image = UIImage(named: imageName!)
+            destination.timeLabel.text = self.podsData[self.tableView.indexPathForSelectedRow!.row][.neededTime]
         }
     }
 }

@@ -84,13 +84,13 @@
 				A5D509EC1E55E4D000C7B4D0 /* DBCommunication.swift */,
 				A5DC29BF1E57CCBF009B58BF /* Notifications.swift */,
 				A56B69DD1E57717900273EC2 /* UserDefaultKeys.swift */,
+				A5DC29C21E57E0F4009B58BF /* LogsTableViewCell.h */,
+				A5DC29C31E57E0F4009B58BF /* LogsTableViewCell.m */,
+				A5DC29C11E57E0F4009B58BF /* examPrep-Bridging-Header.h */,
 				A5ED21121E54B1880081C26A /* Main.storyboard */,
 				A5ED21151E54B1880081C26A /* Assets.xcassets */,
 				A5ED21171E54B1880081C26A /* LaunchScreen.storyboard */,
 				A5ED211A1E54B1880081C26A /* Info.plist */,
-				A5DC29C21E57E0F4009B58BF /* LogsTableViewCell.h */,
-				A5DC29C31E57E0F4009B58BF /* LogsTableViewCell.m */,
-				A5DC29C11E57E0F4009B58BF /* examPrep-Bridging-Header.h */,
 			);
 			path = examPrep;
 			sourceTree = "<group>";

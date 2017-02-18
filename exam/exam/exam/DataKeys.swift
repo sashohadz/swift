@@ -11,6 +11,8 @@ import Foundation
 enum UserDefaultKeys: String {
     case username = "username"
     case password = "password"
+    case name = "name"
+    case gsmNumber = "gsmNumber"
     case autoLoginEnabled = "autoLoginEnabled"
 }
 

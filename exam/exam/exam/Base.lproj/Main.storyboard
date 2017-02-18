@@ -35,7 +35,7 @@
         <!--Cards-->
         <scene sceneID="Abw-hd-nf0">
             <objects>
-                <tableViewController id="kVf-aB-UTU" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CardsTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kVf-aB-UTU" customClass="CardsTableViewController" customModule="exam" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lVD-L8-3DV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,6 +56,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cards" id="Wl8-9T-20L">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="L1n-Mj-zUb">
+                            <connections>
+                                <action selector="logoutButtonPressed:" destination="kVf-aB-UTU" id="5xL-Z9-kDZ"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k8e-FD-N3l">
                             <connections>
                                 <segue destination="Gn6-jx-qMH" kind="show" identifier="ToAddItemSegue" id="o9v-bO-Nfe"/>
@@ -63,6 +68,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="logoutButton" destination="L1n-Mj-zUb" id="Gcx-D6-Gns"/>
                         <segue destination="ET3-L8-VXc" kind="show" identifier="ToItemDetailSegue" id="XOp-2w-K6B"/>
                     </connections>
                 </tableViewController>
@@ -201,7 +207,7 @@
                         <outlet property="loginButton" destination="Qvw-m9-1KH" id="EC2-Ge-zff"/>
                         <outlet property="passwordTextFIeld" destination="agY-Wu-0e1" id="dwR-Lp-hou"/>
                         <outlet property="registerButton" destination="Eh1-Vt-KTc" id="MFp-tq-3a3"/>
-                        <outlet property="userNameTextFIeld" destination="FgF-dr-Gxh" id="rJS-2A-0Ra"/>
+                        <outlet property="usernameTextFIeld" destination="FgF-dr-Gxh" id="YHf-Fe-ub7"/>
                         <segue destination="Amh-b8-Y3x" kind="presentation" identifier="LoginToMainScreenSegue" modalTransitionStyle="crossDissolve" id="m3g-ef-yKA"/>
                     </connections>
                 </viewController>

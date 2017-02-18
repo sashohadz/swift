@@ -42,7 +42,7 @@ class DataCommunication: NSObject {
         task.resume()
     }
     
-    func login(with username: String, passwordHash: String, completionHandler: @escaping (_ success: Bool)->()) {
+    func login(with username: String, password: String, completionHandler: @escaping (_ success: Bool)->()) {
         guard let URL = URL(string: "https://swiftdev-fa92e.firebaseio.com/testPrep/users/\(username).json") else { return }
         var request = URLRequest(url: URL)
         request.httpMethod = "GET"
@@ -64,7 +64,7 @@ class DataCommunication: NSObject {
                             completionHandler(false)
                             return
                         }
-                        if DBUserName == username && DBPass == passwordHash {
+                        if DBUserName == username && DBPass == password {
                             completionHandler(true)
                             return
                         }

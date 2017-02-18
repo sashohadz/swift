@@ -56,6 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         case .OK:
             let userNameValue = userNameTextField.text! as String
             self.resultLabel.textColor = UIColor.green
+            Leanplum.setUserId(userNameValue)
             self.resultLabel.text = "Logged in as \(userNameValue)"
         case .Empty:
             self.resultLabel.textColor = UIColor.red

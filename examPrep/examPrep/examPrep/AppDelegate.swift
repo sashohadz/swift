@@ -1,38 +1,21 @@
 //
 //  AppDelegate.swift
-//  CustomTableViewCell
+//  examPrep
 //
-//  Created by Sasho Hadzhiev on 2/4/17.
+//  Created by Sasho Hadzhiev on 2/15/17.
 //  Copyright © 2017 Sasho Hadzhiev. All rights reserved.
 //
 
 import UIKit
-import Foundation
-#if DEBUG
-    import AdSupport
-#endif
-import Leanplum
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
-    var profileImage = LPVar.define("profileImage", withFile: "plum")
-    
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        #if DEBUG
-            Leanplum.setAppId("app_",
-                              withDevelopmentKey:"dev_")
-        #else
-            Leanplum.setAppId("app_",
-                              withProductionKey: "prod_")
-        #endif
-        
-        Leanplum.setVerboseLoggingInDevelopmentMode(true)
-        Leanplum.start()
+        // Override point for customization after application launch.
         return true
     }
 

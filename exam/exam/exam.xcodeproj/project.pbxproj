@@ -19,6 +19,8 @@
 		A50AFA641E583F20003E4B24 /* DataCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AFA631E583F20003E4B24 /* DataCommunication.swift */; };
 		A50AFA661E584414003E4B24 /* DataKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AFA651E584414003E4B24 /* DataKeys.swift */; };
 		A50AFA681E585298003E4B24 /* CardsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AFA671E585298003E4B24 /* CardsTableViewController.swift */; };
+		A50AFA6A1E5876FA003E4B24 /* DataNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50AFA691E5876FA003E4B24 /* DataNotifications.swift */; };
+		A50AFA6E1E587E76003E4B24 /* CardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A50AFA6D1E587E76003E4B24 /* CardTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,10 @@
 		A50AFA631E583F20003E4B24 /* DataCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataCommunication.swift; sourceTree = "<group>"; };
 		A50AFA651E584414003E4B24 /* DataKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataKeys.swift; sourceTree = "<group>"; };
 		A50AFA671E585298003E4B24 /* CardsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsTableViewController.swift; sourceTree = "<group>"; };
+		A50AFA691E5876FA003E4B24 /* DataNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataNotifications.swift; sourceTree = "<group>"; };
+		A50AFA6B1E587E75003E4B24 /* exam-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exam-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		A50AFA6C1E587E76003E4B24 /* CardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CardTableViewCell.h; path = ../CardTableViewCell.h; sourceTree = "<group>"; };
+		A50AFA6D1E587E76003E4B24 /* CardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CardTableViewCell.m; path = ../CardTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,10 @@
 				A50AFA5D1E583961003E4B24 /* ItemDetailViewController.swift */,
 				A50AFA631E583F20003E4B24 /* DataCommunication.swift */,
 				A50AFA651E584414003E4B24 /* DataKeys.swift */,
+				A50AFA691E5876FA003E4B24 /* DataNotifications.swift */,
+				A50AFA6C1E587E76003E4B24 /* CardTableViewCell.h */,
+				A50AFA6D1E587E76003E4B24 /* CardTableViewCell.m */,
+				A50AFA6B1E587E75003E4B24 /* exam-Bridging-Header.h */,
 				A50AFA4D1E5828B8003E4B24 /* Main.storyboard */,
 				A50AFA501E5828B8003E4B24 /* Assets.xcassets */,
 				A50AFA521E5828B8003E4B24 /* LaunchScreen.storyboard */,
@@ -118,6 +128,7 @@
 					A50AFA451E5828B8003E4B24 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 28ND8Z4YSN;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -160,6 +171,8 @@
 			files = (
 				A50AFA601E583971003E4B24 /* AddItemViewController.swift in Sources */,
 				A50AFA4C1E5828B8003E4B24 /* LoginViewController.swift in Sources */,
+				A50AFA6E1E587E76003E4B24 /* CardTableViewCell.m in Sources */,
+				A50AFA6A1E5876FA003E4B24 /* DataNotifications.swift in Sources */,
 				A50AFA4A1E5828B8003E4B24 /* AppDelegate.swift in Sources */,
 				A50AFA621E583A43003E4B24 /* RegisterViewController.swift in Sources */,
 				A50AFA681E585298003E4B24 /* CardsTableViewController.swift in Sources */,
@@ -289,11 +302,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 28ND8Z4YSN;
 				INFOPLIST_FILE = exam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourse.exam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "exam-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -302,11 +318,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 28ND8Z4YSN;
 				INFOPLIST_FILE = exam/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourse.exam;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "exam-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

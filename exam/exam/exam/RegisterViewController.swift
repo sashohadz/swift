@@ -10,7 +10,6 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -22,25 +21,11 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         let name = nameTextField.text
@@ -51,9 +36,7 @@ class RegisterViewController: UIViewController {
         self.dataDictionary[UserDefaultKeys.name.rawValue] = name
         self.dataDictionary[UserDefaultKeys.password.rawValue] = password
         self.dataDictionary[UserDefaultKeys.gsmNumber.rawValue] = gsmNumber
-        
         DataCommunication.instance.registerUser(info: self.dataDictionary)
-        
         UserDefaults.standard.set(true, forKey: UserDefaultKeys.autoLoginEnabled.rawValue)
         UserDefaults.standard.set(username, forKey: UserDefaultKeys.username.rawValue)
         UserDefaults.standard.set(password, forKey: UserDefaultKeys.password.rawValue)
@@ -61,5 +44,4 @@ class RegisterViewController: UIViewController {
         self.modalTransitionStyle = .crossDissolve
         self.present(UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()!, animated: true, completion: nil)
     }
-
 }

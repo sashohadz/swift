@@ -10,12 +10,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-
     @IBOutlet weak var usernameTextFIeld: UITextField!
     @IBOutlet weak var passwordTextFIeld: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +39,6 @@ class LoginViewController: UIViewController {
         
         switch sender {
         case self.loginButton:
-            
             guard usernameTextFIeld.text!.characters.count > 0 else {
                 let alert = UIAlertController.init(title: "Error", message: "Please enter a username.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -74,15 +71,11 @@ class LoginViewController: UIViewController {
                 }
             }
             
-            
         case self.registerButton:
             performSegue(withIdentifier: "LoginToRegisterSegue", sender: self)
         default:
             break
         }
-        
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

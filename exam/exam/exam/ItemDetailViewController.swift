@@ -10,6 +10,9 @@ import UIKit
 
 class ItemDetailViewController: UIViewController {
 
+    @IBOutlet weak var recepientNameLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

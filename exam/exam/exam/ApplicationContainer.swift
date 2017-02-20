@@ -10,7 +10,7 @@ import UIKit
 
 class ApplicationContainer: UIViewController {
 
-     var userLoggedIn:Bool!
+    var userLoggedIn:Bool!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class ApplicationContainer: UIViewController {
         else {
             self.userLoggedIn = false
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

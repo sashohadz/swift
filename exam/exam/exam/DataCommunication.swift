@@ -23,8 +23,7 @@ class DataCommunication: NSObject {
     func registerUser(info:[String:Any?]) {
         
         let username = info[UserDefaultKeys.username.rawValue] as! String
-//        let password = info[UserDefaultKeys.password.rawValue] as! String
-        guard let URL = URL(string: "https://swiftdev-fa92e.firebaseio.com/testPrep/users/\(username).json") else { return }
+        guard let URL = URL(string: "https://softuniswiftexam1.firebaseio.com/zazazo/users/\(username).json") else { return }
         var request = URLRequest(url: URL)
         request.httpMethod = "PUT"
         request.httpBody = try! JSONSerialization.data(withJSONObject: info, options: [])
@@ -43,7 +42,7 @@ class DataCommunication: NSObject {
     }
     
     func login(with username: String, password: String, completionHandler: @escaping (_ success: Bool)->()) {
-        guard let URL = URL(string: "https://swiftdev-fa92e.firebaseio.com/testPrep/users/\(username).json") else { return }
+        guard let URL = URL(string: "https://softuniswiftexam1.firebaseio.com/zazazo/users/\(username).json") else { return }
         var request = URLRequest(url: URL)
         request.httpMethod = "GET"
         
@@ -74,6 +73,62 @@ class DataCommunication: NSObject {
                 }
                 
                 completionHandler(false)
+            }
+            else {
+                print("URL Session Task Failed: %@", error!.localizedDescription)
+            }
+        })
+        task.resume()
+    }
+    
+    func placeNewOrder(info:[String:Any?]) {
+        
+        let username = UserDefaults.standard.string(forKey: UserDefaultKeys.username.rawValue)! as String
+        let timestamp = String(Int(Date().timeIntervalSince1970))
+        
+        guard let URL = URL(string: "https://softuniswiftexam1.firebaseio.com/zazazo/data/\(username)/\(timestamp)/.json") else { return }
+        var request = URLRequest(url: URL)
+        request.httpMethod = "PUT"
+        request.httpBody = try! JSONSerialization.data(withJSONObject: info, options: [])
+        
+        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if (error == nil) {
+                
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                print("URL Session Task Succeeded: HTTP \(statusCode)")
+            }
+            else {
+                print("URL Session Task Failed: %@", error!.localizedDescription)
+            }
+        })
+        task.resume()
+    }
+    
+    func getAllOrdersShallowInfo() {
+        
+        let username = UserDefaults.standard.string(forKey: UserDefaultKeys.username.rawValue)! as String
+
+        guard let URL = URL(string: "https://softuniswiftexam1.firebaseio.com/zazazo/data/\(username)/.json?shallow=true") else { return }
+        var request = URLRequest(url: URL)
+        request.httpMethod = "GET"
+        
+        let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            if (error == nil) {
+                
+                let statusCode = (response as! HTTPURLResponse).statusCode
+                print("URL Session Task Succeeded: HTTP \(statusCode)")
+                
+                if statusCode == 200 {
+                    do {
+                        let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! [String:Any?]
+                        for anItem in json {
+                            self.allDataItems.insert(anItem.key)
+                        }
+                        NotificationCenter.default.post(name: .DataReloaded, object: self)
+                        
+                    } catch {
+                    }
+                }
             }
             else {
                 print("URL Session Task Failed: %@", error!.localizedDescription)

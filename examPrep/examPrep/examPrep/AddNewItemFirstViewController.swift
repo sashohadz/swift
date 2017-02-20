@@ -25,6 +25,8 @@ class AddNewItemFirstViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         dataDictionary[DataNames.deviceId.rawValue] = self.deviceTextField.text

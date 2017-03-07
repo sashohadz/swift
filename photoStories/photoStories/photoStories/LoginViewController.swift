@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Leanplum
 
 class LoginViewController: UIViewController {
 
@@ -23,8 +24,16 @@ class LoginViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        self.profileImageView.image = appDelegate.profileImage?.imageValue()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        Leanplum.onVariablesChanged({
+            self.logoImageView.image = appDelegate.profileImage?.imageValue()
+            NSLog((appDelegate.welcomeMessage?.stringValue())!)
+        })
+        Leanplum.advance(to: "LoginScreen")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        Leanplum.advance(to: nil, withParameters: ["LoginParamOne":"one"])
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +56,7 @@ class LoginViewController: UIViewController {
                 UserDefaults.standard.set(self.usernameTextField.text, forKey: UserDefaultKeys.username.rawValue)
                 UserDefaults.standard.set(self.passwordTextField.text, forKey: UserDefaultKeys.password.rawValue)
                 UserDefaults.standard.set(true, forKey: UserDefaultKeys.autoLoginEnabled.rawValue)
+                Leanplum.setUserId(self.usernameTextField.text)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "LoginCompletedSegue", sender: nil)
                 }

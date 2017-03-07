@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Leanplum
 
 class StoriesTableViewController: UITableViewController, StoryTableViewCellDelegate {
 
@@ -50,7 +51,6 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
         if (!userLoggedIn) {
             self.logoutButton.title = "Login"
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -78,8 +78,8 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
         let selectedCell = tableView.cellForRow(at: indexPath) as! StoryTableViewCell
         let storyShortText = selectedCell.storyDetailLabel.text
         print("Track Selected Story with param: \(storyShortText ?? "")")
-//        Leanplum.track("Selected Story", withParameters: storyShortText)
-        
+        Leanplum.track("Selected Story", withParameters: ["Story":storyShortText!])
+
         self.performSegue(withIdentifier: "ToStoryDetailsSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

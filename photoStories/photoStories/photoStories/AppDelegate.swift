@@ -7,20 +7,33 @@
 //
 
 import UIKit
+#if DEBUG
+    import AdSupport
+#endif
+import Leanplum
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-//    var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
-//    var profileImage = LPVar.define("loginImage", withFile: "plum")
+    var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
+    var profileImage = LPVar.define("loginImage", withFile: "plum")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-       
+//        #if DEBUG
+//            Leanplum.setAppId("app_QQnc8FvHZN4oj37b5Z6d0YfC4HLDihPcit73FOkD5yU",
+//                              withDevelopmentKey:"dev_EfTmctMui2e1zkdwBO7ANjvQYo9RhxsAGAl7O3ZL3W4")
+//        #else
+            Leanplum.setAppId("app_QQnc8FvHZN4oj37b5Z6d0YfC4HLDihPcit73FOkD5yU",
+                              withProductionKey: "prod_RxRD60VlpQjSLoc0ydu26vZy2dvW1wVb2W97P9lN3oI")
+//        #endif
+//        Leanplum.allowInterfaceEditing()
+        Leanplum.start()
+
         
-//        Leanplum.setVerboseLoggingInDevelopmentMode(true)
+        Leanplum.setVerboseLoggingInDevelopmentMode(true)
 
         return true
     }

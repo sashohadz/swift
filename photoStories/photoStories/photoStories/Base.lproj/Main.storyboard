@@ -218,7 +218,7 @@
             </objects>
             <point key="canvasLocation" x="1012" y="904"/>
         </scene>
-        <!--Stories-->
+        <!--Circuits-->
         <scene sceneID="89c-ps-dWz">
             <objects>
                 <tableViewController id="a76-hh-myx" customClass="StoriesTableViewController" customModule="photoStories" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,16 +231,17 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="by9-t7-XNI" id="6ml-Po-WmP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spain.png" translatesAutoresizingMaskIntoConstraints="NO" id="vYl-m2-WT6">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="track3.png" translatesAutoresizingMaskIntoConstraints="NO" id="vYl-m2-WT6">
                                             <rect key="frame" x="36" y="9" width="250" height="140"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S6-B1-YIg">
                                             <rect key="frame" x="36" y="121" width="250" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="0.86799365719999999" green="0.86677116759999995" blue="0.88812501600000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bt-0D-ybh">
@@ -281,7 +282,7 @@
                             <outlet property="delegate" destination="a76-hh-myx" id="WAr-ca-SOk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Stories" id="Igk-OG-Qey">
+                    <navigationItem key="navigationItem" title="Circuits" id="Igk-OG-Qey">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="bda-rz-fXE">
                             <connections>
                                 <action selector="logoutButtonPressed:" destination="a76-hh-myx" id="Ogh-7z-Ae7"/>
@@ -369,7 +370,7 @@
     <resources>
         <image name="bookmarkSet.png" width="55" height="81"/>
         <image name="bookmarkSetDefault.png" width="55" height="81"/>
-        <image name="spain.png" width="250" height="136"/>
+        <image name="track3.png" width="300" height="210"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="neM-eC-FV7"/>

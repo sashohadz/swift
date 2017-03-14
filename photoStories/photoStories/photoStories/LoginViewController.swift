@@ -29,11 +29,12 @@ class LoginViewController: UIViewController {
             self.logoImageView.image = appDelegate.profileImage?.imageValue()
             NSLog((appDelegate.welcomeMessage?.stringValue())!)
         })
-        Leanplum.advance(to: "LoginScreen")
+        
+        Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"one"])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        Leanplum.advance(to: nil, withParameters: ["LoginParamOne":"one"])
+        Leanplum.advance(to: nil)
     }
 
     override func didReceiveMemoryWarning() {

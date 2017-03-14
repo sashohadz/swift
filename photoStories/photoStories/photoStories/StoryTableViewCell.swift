@@ -27,11 +27,6 @@ class StoryTableViewCell: UITableViewCell {
             case true:
                 self.storyImageView.layer.borderWidth = 4.0
                 self.storyImageView.layer.borderColor = UIColor.green.cgColor
-                let array = ["Apples", "Peaches", "Plums"]
-                for item in array {
-                    print("Track Purchase event with PurchasedItem parameter value: \(item)")
-                    Leanplum.track("Purchase", withParameters: ["PurchasedItem":"\(item)"])
-                }
             case false:
                 self.storyImageView.layer.borderWidth = 0.0
             default:
@@ -63,5 +58,4 @@ class StoryTableViewCell: UITableViewCell {
     func buttonWasPressed() {
         self.delegate?.didPressBookmarkButton(inCell: self)
     }
-
 }

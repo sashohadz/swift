@@ -21,20 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var profileImage = LPVar.define("loginImage", withFile: "plum")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-//        #if DEBUG
-//            Leanplum.setAppId("app_QQnc8FvHZN4oj37b5Z6d0YfC4HLDihPcit73FOkD5yU",
-//                              withDevelopmentKey:"dev_EfTmctMui2e1zkdwBO7ANjvQYo9RhxsAGAl7O3ZL3W4")
-//        #else
-            Leanplum.setAppId("app_QQnc8FvHZN4oj37b5Z6d0YfC4HLDihPcit73FOkD5yU",
-                              withProductionKey: "prod_RxRD60VlpQjSLoc0ydu26vZy2dvW1wVb2W97P9lN3oI")
-//        #endif
-//        Leanplum.allowInterfaceEditing()
-        Leanplum.start()
+
+        #if DEBUG
+//            Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
+            Leanplum.setAppId("app_",
+                              withDevelopmentKey:"dev_")
+        #else
+            Leanplum.setAppId("app_",
+                              withProductionKey: "prod_")
+        #endif
 
         
-        Leanplum.setVerboseLoggingInDevelopmentMode(true)
-
+//        Leanplum.allowInterfaceEditing()
+//        Leanplum.setVerboseLoggingInDevelopmentMode(true)
+        
+        Leanplum.start()
         return true
     }
 
@@ -59,7 +60,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 

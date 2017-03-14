@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2235222C70FF5AFA560BA00D /* Pods_photoStories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */; };
+		A57396DA1E77E595002EFA57 /* track1.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D41E77E595002EFA57 /* track1.png */; };
+		A57396DB1E77E595002EFA57 /* track2.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D51E77E595002EFA57 /* track2.png */; };
+		A57396DC1E77E595002EFA57 /* track3.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D61E77E595002EFA57 /* track3.png */; };
+		A57396DD1E77E595002EFA57 /* track4.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D71E77E595002EFA57 /* track4.png */; };
+		A57396DE1E77E595002EFA57 /* track5.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D81E77E595002EFA57 /* track5.png */; };
+		A57396DF1E77E595002EFA57 /* track6.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D91E77E595002EFA57 /* track6.png */; };
 		A5CC3B551E5C320C00F53146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B541E5C320C00F53146 /* AppDelegate.swift */; };
 		A5CC3B571E5C320C00F53146 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B561E5C320C00F53146 /* ApplicationContainer.swift */; };
 		A5CC3B5A1E5C320C00F53146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B581E5C320C00F53146 /* Main.storyboard */; };
@@ -20,20 +26,20 @@
 		A5CC3B701E5C355500F53146 /* bookmarkSet.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B6E1E5C355500F53146 /* bookmarkSet.png */; };
 		A5CC3B711E5C355500F53146 /* bookmarkSetDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B6F1E5C355500F53146 /* bookmarkSetDefault.png */; };
 		A5CC3B731E5C3B6400F53146 /* DBCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B721E5C3B6400F53146 /* DBCommunication.swift */; };
-		A5CC3B751E5C3B9400F53146 /* spain.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B741E5C3B9400F53146 /* spain.png */; };
 		A5CC3B781E5C3EE800F53146 /* DataKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B771E5C3EE800F53146 /* DataKeys.swift */; };
-		A5CC3B7A1E5C400100F53146 /* singapore.png in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B791E5C400100F53146 /* singapore.png */; };
 		A5FE7B5A1E5CD3A100253B8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FE7B591E5CD3A100253B8A /* DetailViewController.swift */; };
-		A5FE7B5E1E5CDC4100253B8A /* trondheim1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B5B1E5CDC4100253B8A /* trondheim1.png */; };
-		A5FE7B5F1E5CDC4100253B8A /* trondheim2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B5C1E5CDC4100253B8A /* trondheim2.png */; };
-		A5FE7B641E5CDD5B00253B8A /* trondheim3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B631E5CDD5B00253B8A /* trondheim3.png */; };
-		A5FE7B661E5CDD6500253B8A /* sanfrancisco.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B651E5CDD6500253B8A /* sanfrancisco.png */; };
 		A5FE7B681E5CDE7800253B8A /* plum.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B671E5CDE7800253B8A /* plum.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD77EC486BCEBE99E7B603 /* Pods-photoStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoStories.release.xcconfig"; path = "Pods/Target Support Files/Pods-photoStories/Pods-photoStories.release.xcconfig"; sourceTree = "<group>"; };
+		A57396D41E77E595002EFA57 /* track1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track1.png; sourceTree = "<group>"; };
+		A57396D51E77E595002EFA57 /* track2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track2.png; sourceTree = "<group>"; };
+		A57396D61E77E595002EFA57 /* track3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track3.png; sourceTree = "<group>"; };
+		A57396D71E77E595002EFA57 /* track4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track4.png; sourceTree = "<group>"; };
+		A57396D81E77E595002EFA57 /* track5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track5.png; sourceTree = "<group>"; };
+		A57396D91E77E595002EFA57 /* track6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track6.png; sourceTree = "<group>"; };
 		A5CC3B511E5C320C00F53146 /* photoStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC3B541E5C320C00F53146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC3B561E5C320C00F53146 /* ApplicationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
@@ -48,14 +54,8 @@
 		A5CC3B6E1E5C355500F53146 /* bookmarkSet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarkSet.png; sourceTree = "<group>"; };
 		A5CC3B6F1E5C355500F53146 /* bookmarkSetDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bookmarkSetDefault.png; sourceTree = "<group>"; };
 		A5CC3B721E5C3B6400F53146 /* DBCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCommunication.swift; sourceTree = "<group>"; };
-		A5CC3B741E5C3B9400F53146 /* spain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spain.png; sourceTree = "<group>"; };
 		A5CC3B771E5C3EE800F53146 /* DataKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataKeys.swift; sourceTree = "<group>"; };
-		A5CC3B791E5C400100F53146 /* singapore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singapore.png; sourceTree = "<group>"; };
 		A5FE7B591E5CD3A100253B8A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A5FE7B5B1E5CDC4100253B8A /* trondheim1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trondheim1.png; sourceTree = "<group>"; };
-		A5FE7B5C1E5CDC4100253B8A /* trondheim2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trondheim2.png; sourceTree = "<group>"; };
-		A5FE7B631E5CDD5B00253B8A /* trondheim3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trondheim3.png; sourceTree = "<group>"; };
-		A5FE7B651E5CDD6500253B8A /* sanfrancisco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sanfrancisco.png; sourceTree = "<group>"; };
 		A5FE7B671E5CDE7800253B8A /* plum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plum.png; sourceTree = "<group>"; };
 		ACB91358FC4C8680D2B73C1B /* Pods-photoStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoStories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photoStories/Pods-photoStories.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,14 +131,14 @@
 		A5CC3B761E5C3BA700F53146 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A57396D41E77E595002EFA57 /* track1.png */,
+				A57396D51E77E595002EFA57 /* track2.png */,
+				A57396D61E77E595002EFA57 /* track3.png */,
+				A57396D71E77E595002EFA57 /* track4.png */,
+				A57396D81E77E595002EFA57 /* track5.png */,
+				A57396D91E77E595002EFA57 /* track6.png */,
 				A5FE7B671E5CDE7800253B8A /* plum.png */,
-				A5FE7B5B1E5CDC4100253B8A /* trondheim1.png */,
-				A5FE7B5C1E5CDC4100253B8A /* trondheim2.png */,
-				A5FE7B631E5CDD5B00253B8A /* trondheim3.png */,
-				A5FE7B651E5CDD6500253B8A /* sanfrancisco.png */,
-				A5CC3B791E5C400100F53146 /* singapore.png */,
 				A5CC3B6E1E5C355500F53146 /* bookmarkSet.png */,
-				A5CC3B741E5C3B9400F53146 /* spain.png */,
 				A5CC3B6F1E5C355500F53146 /* bookmarkSetDefault.png */,
 			);
 			name = images;
@@ -208,16 +208,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5CC3B701E5C355500F53146 /* bookmarkSet.png in Resources */,
-				A5CC3B751E5C3B9400F53146 /* spain.png in Resources */,
 				A5CC3B5F1E5C320C00F53146 /* LaunchScreen.storyboard in Resources */,
 				A5CC3B711E5C355500F53146 /* bookmarkSetDefault.png in Resources */,
-				A5FE7B661E5CDD6500253B8A /* sanfrancisco.png in Resources */,
 				A5FE7B681E5CDE7800253B8A /* plum.png in Resources */,
-				A5FE7B5E1E5CDC4100253B8A /* trondheim1.png in Resources */,
-				A5FE7B5F1E5CDC4100253B8A /* trondheim2.png in Resources */,
+				A57396DD1E77E595002EFA57 /* track4.png in Resources */,
+				A57396DA1E77E595002EFA57 /* track1.png in Resources */,
 				A5CC3B5C1E5C320C00F53146 /* Assets.xcassets in Resources */,
-				A5CC3B7A1E5C400100F53146 /* singapore.png in Resources */,
-				A5FE7B641E5CDD5B00253B8A /* trondheim3.png in Resources */,
+				A57396DF1E77E595002EFA57 /* track6.png in Resources */,
+				A57396DE1E77E595002EFA57 /* track5.png in Resources */,
+				A57396DC1E77E595002EFA57 /* track3.png in Resources */,
+				A57396DB1E77E595002EFA57 /* track2.png in Resources */,
 				A5CC3B5A1E5C320C00F53146 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

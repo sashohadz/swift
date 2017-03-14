@@ -14,23 +14,23 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     let storiesData:[[StoryDataType:String]] = [
-        [.storyImage:"trondheim1",
-         .storyName:"Kickoff",
+        [.storyImage:"track1",
+         .storyName:"Istanbul Park",
          .storyShortDetail:"Techical kickoff"],
-        [.storyImage:"trondheim2",
-         .storyName:"Kickoff",
+        [.storyImage:"track2",
+         .storyName:"Nürburgring",
          .storyShortDetail:"Techical kickoff second."],
-        [.storyImage:"trondheim3",
-         .storyName:"Kickoff",
+        [.storyImage:"track3",
+         .storyName:"Pescara Circuit",
          .storyShortDetail:"Techical kickoff third :)."],
-        [.storyImage:"spain",
-         .storyName:"Team event! :)",
+        [.storyImage:"track4",
+         .storyName:"Pescara Circuit",
          .storyShortDetail:"Short teambuilding."],
-        [.storyImage:"singapore",
-         .storyName:"Some story text",
+        [.storyImage:"track5",
+         .storyName:"Scandinavian Raceway",
          .storyShortDetail:"Some story text"],
-        [.storyImage:"sanfrancisco",
-         .storyName:"sf office team gathering",
+        [.storyImage:"track6",
+         .storyName:"Zeltweg Airfield",
          .storyShortDetail:"sf office team gathering"],
     ]
     
@@ -77,8 +77,9 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! StoryTableViewCell
         let storyShortText = selectedCell.storyDetailLabel.text
-        print("Track Selected Story with param: \(storyShortText ?? "")")
-        Leanplum.track("Selected Story", withParameters: ["Story":storyShortText!])
+        print("Track Selected Circuit with Circuit: \(storyShortText ?? "")")
+        
+        Leanplum.track("Selected Circuit", withParameters: ["Circuit":storyShortText!])
 
         self.performSegue(withIdentifier: "ToStoryDetailsSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)

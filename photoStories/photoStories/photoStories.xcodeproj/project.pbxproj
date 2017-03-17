@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2235222C70FF5AFA560BA00D /* Pods_photoStories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */; };
+		A55E51941E7C324600E648F9 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E51931E7C324600E648F9 /* MessagesTableViewController.swift */; };
 		A57396DA1E77E595002EFA57 /* track1.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D41E77E595002EFA57 /* track1.png */; };
 		A57396DB1E77E595002EFA57 /* track2.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D51E77E595002EFA57 /* track2.png */; };
 		A57396DC1E77E595002EFA57 /* track3.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D61E77E595002EFA57 /* track3.png */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD77EC486BCEBE99E7B603 /* Pods-photoStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoStories.release.xcconfig"; path = "Pods/Target Support Files/Pods-photoStories/Pods-photoStories.release.xcconfig"; sourceTree = "<group>"; };
+		A55E51931E7C324600E648F9 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		A57396D41E77E595002EFA57 /* track1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track1.png; sourceTree = "<group>"; };
 		A57396D51E77E595002EFA57 /* track2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track2.png; sourceTree = "<group>"; };
 		A57396D61E77E595002EFA57 /* track3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track3.png; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				A5CC3B661E5C335500F53146 /* StoriesTableViewController.swift */,
 				A5CC3B6C1E5C33E500F53146 /* StoryTableViewCell.swift */,
 				A5FE7B591E5CD3A100253B8A /* DetailViewController.swift */,
+				A55E51931E7C324600E648F9 /* MessagesTableViewController.swift */,
 				A5CC3B721E5C3B6400F53146 /* DBCommunication.swift */,
 				A5CC3B771E5C3EE800F53146 /* DataKeys.swift */,
 				A5CC3B581E5C320C00F53146 /* Main.storyboard */,
@@ -286,6 +289,7 @@
 				A5CC3B551E5C320C00F53146 /* AppDelegate.swift in Sources */,
 				A5CC3B6D1E5C33E500F53146 /* StoryTableViewCell.swift in Sources */,
 				A5CC3B781E5C3EE800F53146 /* DataKeys.swift in Sources */,
+				A55E51941E7C324600E648F9 /* MessagesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

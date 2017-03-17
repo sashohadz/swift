@@ -74,5 +74,4 @@ class LoginViewController: UIViewController {
     
     @IBAction func registrationButtonPressed(_ sender: UIButton) {
     }
-    
 }

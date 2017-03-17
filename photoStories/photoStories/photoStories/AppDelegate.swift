@@ -30,11 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Leanplum.setAppId("app_",
                               withProductionKey: "prod_")
         #endif
-
         
 //        Leanplum.allowInterfaceEditing()
-//        Leanplum.setVerboseLoggingInDevelopmentMode(true)
-        
+        Leanplum.setVerboseLoggingInDevelopmentMode(true)
         Leanplum.start()
         return true
     }

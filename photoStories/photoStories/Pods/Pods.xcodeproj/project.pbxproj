@@ -13,22 +13,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1717E02BA4AFEEF765F21A4B285030B6 /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
 		1D3566830851DE3284C8974B66B4704C /* Pods_photoStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD8C2C7356F5DB622F5A3609F12C1FD /* Pods-photoStories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-photoStories-dummy.m"; sourceTree = "<group>"; };
+		70366FF71611FDF3F52F6618CFD3480B /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
 		73EAD83940DF4A942C3F980025357155 /* Pods-photoStories-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-photoStories-umbrella.h"; sourceTree = "<group>"; };
-		74C13E9AEF34B12DEB789A9591CC6ED0 /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
 		76AA792B8F4CD2D80E9A31BA42F38B46 /* Pods-photoStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photoStories.debug.xcconfig"; sourceTree = "<group>"; };
 		80CEE53C2A107BF66107450FA4CC2946 /* Pods-photoStories-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-photoStories-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB342AFF5A04C3089C7FC9811F83EF8D /* Pods-photoStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photoStories.release.xcconfig"; sourceTree = "<group>"; };
 		B1B11AA74C35DC02FF393F75B12CCBE8 /* Pods-photoStories-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-photoStories-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B663E557C44A7E59009250BA626466A7 /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
+		BF03A4CB6441CC59E9B726AFAD6835D7 /* LPInbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPInbox.h; path = Leanplum.framework/Headers/LPInbox.h; sourceTree = "<group>"; };
 		C688ECCD2E5126A70FBE8064389B5D2B /* Pods-photoStories-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photoStories-frameworks.sh"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE240C3C4E9C380CC5CC5B6A546B21C6 /* Pods-photoStories.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-photoStories.modulemap"; sourceTree = "<group>"; };
 		F871342B80630ABD85B36DB4AB268876 /* Pods-photoStories-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photoStories-resources.sh"; sourceTree = "<group>"; };
 		FF0A01253E5E60BE00D54CAD97925460 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFAD36486ABEC63B94D9A67402D69E1E /* LPNewsfeed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPNewsfeed.h; path = Leanplum.framework/Headers/LPNewsfeed.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 		73168592F8F7910D8BD1CBC48E8B020C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B402E5D472E7F58CE5C96B94CD8E764C /* Leanplum-iOS-SDK */,
+				C28465350EECD87FB490E53642B095A9 /* Leanplum-iOS-SDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -96,22 +96,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		95155327F661A580A220B61B62B7CCC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B663E557C44A7E59009250BA626466A7 /* Leanplum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A412963957CA021DBE05DBF226A5EDAB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
 				7C8B41CA0EDDA464D896289CA0A7047C /* Pods-photoStories */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B402E5D472E7F58CE5C96B94CD8E764C /* Leanplum-iOS-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				1717E02BA4AFEEF765F21A4B285030B6 /* Leanplum.h */,
-				FFAD36486ABEC63B94D9A67402D69E1E /* LPNewsfeed.h */,
-				E8E2424B87D7BD00A4A3F30CB2FBB652 /* Frameworks */,
-			);
-			path = "Leanplum-iOS-SDK";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -122,12 +120,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8E2424B87D7BD00A4A3F30CB2FBB652 /* Frameworks */ = {
+		C28465350EECD87FB490E53642B095A9 /* Leanplum-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				74C13E9AEF34B12DEB789A9591CC6ED0 /* Leanplum.framework */,
+				70366FF71611FDF3F52F6618CFD3480B /* Leanplum.h */,
+				BF03A4CB6441CC59E9B726AFAD6835D7 /* LPInbox.h */,
+				95155327F661A580A220B61B62B7CCC1 /* Frameworks */,
 			);
-			name = Frameworks;
+			path = "Leanplum-iOS-SDK";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

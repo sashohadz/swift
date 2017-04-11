@@ -5,7 +5,7 @@
 //  Created by Sasho Hadzhiev on 2/21/17.
 //  Copyright © 2017 Sasho Hadzhiev. All rights reserved.
 //
-
+import UserNotifications
 import UIKit
 #if DEBUG
     import AdSupport
@@ -13,26 +13,40 @@ import UIKit
 import Leanplum
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
+    enum Actions:String{
+        case increment = "INCREMENT"
+        case decrement = "DECREMENT"
+    }
+    
     var window: UIWindow?
     
     var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
     var profileImage = LPVar.define("loginImage", withFile: "plum")
 
+    
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        UNUserNotificationCenter.current().delegate = self
+        return true
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         #if DEBUG
+            Leanplum.setDeviceId("Deviced13123123")
 //            Leanplum.setDeviceId(ASIdentifierManager.shared().advertisingIdentifier.uuidString)
-            Leanplum.setAppId("app_",
-                              withDevelopmentKey:"dev_")
+            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
+                              withDevelopmentKey:"dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI")
         #else
-            Leanplum.setAppId("app_",
-                              withProductionKey: "prod_")
+            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
+                              withProductionKey: "prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ")
         #endif
         
+        configureUserNotifications()
 //        Leanplum.allowInterfaceEditing()
         Leanplum.setVerboseLoggingInDevelopmentMode(true)
+        print("called start")
         Leanplum.start()
         return true
     }
@@ -57,6 +71,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        print("response received for: \(response.actionIdentifier))")
+        //        Leanplum.handleAction(withIdentifier: response.actionIdentifier, forRemoteNotification: response.notification.request.content.userInfo, completionHandler: nil)
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print(notification.request.content.userInfo)
+        completionHandler(.alert)
+    }
+
+    func configureUserNotifications(){
+
+        let incrementAction = UNNotificationAction(identifier: "INCREMENT", title: "INCREMENT", options: [])
+        let decrementAction = UNNotificationAction(identifier: "DECREMENT", title: "DECREMENT", options: [])
+        let category = UNNotificationCategory(identifier: "myNotificationCategory", actions: [incrementAction,decrementAction], intentIdentifiers: [], options: [])
+        
+        if #available(iOS 10.0, *) {
+            print("IOS 10 push registration")
+            let userNotifCenter = UNUserNotificationCenter.current()
+            userNotifCenter.setNotificationCategories([category])
+            
+            userNotifCenter.requestAuthorization(options: [.badge,.alert,.sound]){ (granted,error) in
+                if error == nil{
+                    UIApplication.shared.registerForRemoteNotifications()
+                } else {
+                    print(error?.localizedDescription ?? "Error while registering push")
+                }
+            }
+            
+        }
+        //iOS 8-10
+        else {
+            let settings = UIUserNotificationSettings.init(types: [UIUserNotificationType.alert,
+                                                                   UIUserNotificationType.badge,
+                                                                   UIUserNotificationType.sound],
+                                                           categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
     }
 }
 

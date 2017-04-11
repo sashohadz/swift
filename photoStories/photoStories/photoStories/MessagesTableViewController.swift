@@ -11,12 +11,12 @@ import Leanplum
 
 class MessagesTableViewController: UITableViewController {
 
-    var newsfeedMessages = [LPNewsfeedMessage]()
+    var inboxMessages = [LPInboxMessage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Leanplum.newsfeed().onChanged() {
-            self.newsfeedMessages = Leanplum.newsfeed().allMessages() as! [LPNewsfeedMessage]
+        Leanplum.inbox().onChanged {
+            self.inboxMessages = Leanplum.inbox().allMessages() as! [LPInboxMessage]
             self.tableView.reloadData()
         }
     }
@@ -34,30 +34,30 @@ class MessagesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.newsfeedMessages.count
+        return self.inboxMessages.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
         let row = indexPath.row
-        let message: LPNewsfeedMessage = self.newsfeedMessages[row]
+        let message: LPInboxMessage = self.inboxMessages[row]
         let title = message.title()
         cell.textLabel?.text = title
         let subtitle = message.subtitle()
         cell.detailTextLabel?.text = subtitle
-        
+        print(message.messageId())
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.newsfeedMessages[indexPath.row].read()
+        self.inboxMessages[indexPath.row].read()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            self.newsfeedMessages[indexPath.row].remove()
+            self.inboxMessages[indexPath.row].remove()
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }

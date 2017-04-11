@@ -25,10 +25,11 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        Leanplum.onVariablesChanged({
+        
+        Leanplum.onVariablesChanged {
             self.logoImageView.image = appDelegate.profileImage?.imageValue()
             NSLog((appDelegate.welcomeMessage?.stringValue())!)
-        })
+        }
         
         Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"one"])
     }

@@ -4,6 +4,8 @@
 target 'photoStories' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'Leanplum-iOS-SDK', '~> 1.6.0'
+  pod 'Leanplum-iOS-SDK'
+  pod 'Leanplum-iOS-Location'
+#  pod 'Leanplum-iOS-UIEditor'
 
 end

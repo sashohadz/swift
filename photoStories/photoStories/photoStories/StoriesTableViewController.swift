@@ -14,24 +14,21 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
     @IBOutlet weak var logoutButton: UIBarButtonItem!
     
     let storiesData:[[StoryDataType:String]] = [
-        [.storyImage:"track1",
-         .storyName:"Istanbul Park",
-         .storyShortDetail:"Techical kickoff"],
-        [.storyImage:"track2",
-         .storyName:"Nürburgring",
-         .storyShortDetail:"Techical kickoff second."],
-        [.storyImage:"track3",
-         .storyName:"Pescara Circuit",
-         .storyShortDetail:"Techical kickoff third :)."],
-        [.storyImage:"track4",
-         .storyName:"Pescara Circuit",
-         .storyShortDetail:"Short teambuilding."],
-        [.storyImage:"track5",
-         .storyName:"Scandinavian Raceway",
-         .storyShortDetail:"Some story text"],
-        [.storyImage:"track6",
-         .storyName:"Zeltweg Airfield",
-         .storyShortDetail:"sf office team gathering"],
+        [.storyImage:"moon",
+         .storyName:"stays",
+         .storyShortDetail:"stays"],
+        [.storyImage:"places",
+         .storyName:"places",
+         .storyShortDetail:"places"],
+        [.storyImage:"rewards",
+         .storyName:"rewards",
+         .storyShortDetail:"rewards"],
+        [.storyImage:"card",
+         .storyName:"Payment",
+         .storyShortDetail:"Payment"],
+        [.storyImage:"star",
+         .storyName:"Favourites",
+         .storyShortDetail:"Favourites"]
     ]
     
     override func viewDidLoad() {
@@ -77,10 +74,9 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! StoryTableViewCell
         let storyShortText = selectedCell.storyDetailLabel.text
-        print("Track Selected Circuit with Circuit: \(storyShortText ?? "")")
-        
-        Leanplum.track("Selected Circuit", withParameters: ["Circuit":storyShortText!])
-
+        print("Track Selected item with item: \(storyShortText ?? "")")
+        Leanplum.track("Selected item", withValue: Double(selectedCell.isBookmarked.hashValue), andParameters: ["item":storyShortText!])
+//        Leanplum.setUserAttributes(["age": NSNull(), "gender": NSNull()])
         self.performSegue(withIdentifier: "ToStoryDetailsSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

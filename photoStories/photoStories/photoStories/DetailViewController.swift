@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Leanplum
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var largerImageView: UIImageView!
+    @IBOutlet weak var largerImageView: UIImageView!    
+    @IBOutlet weak var whatsNewButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +20,8 @@ class DetailViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    @IBAction func whatsNewButtonPressed(_ sender: UIButton) {
+        Leanplum.track("News")
     }
 }

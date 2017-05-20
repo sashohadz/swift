@@ -15,15 +15,18 @@
 /* Begin PBXFileReference section */
 		1D3566830851DE3284C8974B66B4704C /* Pods_photoStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BD8C2C7356F5DB622F5A3609F12C1FD /* Pods-photoStories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-photoStories-dummy.m"; sourceTree = "<group>"; };
-		70366FF71611FDF3F52F6618CFD3480B /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
+		57F0793054D03AE2C2F8CF099C082D76 /* LeanplumUIEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumUIEditor.framework; sourceTree = "<group>"; };
+		58F881068F5626925A52042CAF1DA5AA /* LPInbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPInbox.h; path = Leanplum.framework/Headers/LPInbox.h; sourceTree = "<group>"; };
 		73EAD83940DF4A942C3F980025357155 /* Pods-photoStories-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-photoStories-umbrella.h"; sourceTree = "<group>"; };
 		76AA792B8F4CD2D80E9A31BA42F38B46 /* Pods-photoStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photoStories.debug.xcconfig"; sourceTree = "<group>"; };
+		7DF455AB5E4911D9730EA51DA8EDD4F3 /* LeanplumLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LeanplumLocation.framework; sourceTree = "<group>"; };
 		80CEE53C2A107BF66107450FA4CC2946 /* Pods-photoStories-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-photoStories-acknowledgements.plist"; sourceTree = "<group>"; };
+		830EED35C64F2614E774EE70A9A7D631 /* LeanplumUIEditor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LeanplumUIEditor.h; path = LeanplumUIEditor.framework/Headers/LeanplumUIEditor.h; sourceTree = "<group>"; };
+		8B5614A71658A9E217A01C88EB2C8BAC /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
+		935982F4D1AC3D653368216BC33C0DF7 /* Leanplum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Leanplum.h; path = Leanplum.framework/Headers/Leanplum.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB342AFF5A04C3089C7FC9811F83EF8D /* Pods-photoStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-photoStories.release.xcconfig"; sourceTree = "<group>"; };
 		B1B11AA74C35DC02FF393F75B12CCBE8 /* Pods-photoStories-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-photoStories-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B663E557C44A7E59009250BA626466A7 /* Leanplum.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Leanplum.framework; sourceTree = "<group>"; };
-		BF03A4CB6441CC59E9B726AFAD6835D7 /* LPInbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LPInbox.h; path = Leanplum.framework/Headers/LPInbox.h; sourceTree = "<group>"; };
 		C688ECCD2E5126A70FBE8064389B5D2B /* Pods-photoStories-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-photoStories-frameworks.sh"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		DE240C3C4E9C380CC5CC5B6A546B21C6 /* Pods-photoStories.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-photoStories.modulemap"; sourceTree = "<group>"; };
@@ -43,6 +46,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1422A7EEBD846CFA0CDB9749361E2491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DF455AB5E4911D9730EA51DA8EDD4F3 /* LeanplumLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D34C3A108C0AABA2A1B3A71865B905D /* Leanplum-iOS-UIEditor */ = {
+			isa = PBXGroup;
+			children = (
+				830EED35C64F2614E774EE70A9A7D631 /* LeanplumUIEditor.h */,
+				49890A973E1BB86F7C7D67489ADB581B /* Frameworks */,
+			);
+			path = "Leanplum-iOS-UIEditor";
+			sourceTree = "<group>";
+		};
+		1F9625893AC8683183CA7B3C5B969750 /* Leanplum-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				935982F4D1AC3D653368216BC33C0DF7 /* Leanplum.h */,
+				58F881068F5626925A52042CAF1DA5AA /* LPInbox.h */,
+				E2C103B11BF48927B09256340A7612F2 /* Frameworks */,
+			);
+			path = "Leanplum-iOS-SDK";
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +81,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		73168592F8F7910D8BD1CBC48E8B020C /* Pods */ = {
+		49890A973E1BB86F7C7D67489ADB581B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C28465350EECD87FB490E53642B095A9 /* Leanplum-iOS-SDK */,
+				57F0793054D03AE2C2F8CF099C082D76 /* LeanplumUIEditor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		575E40B033243342E1CEDD1980166370 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FC4D50E24D49509C03F0E1D75983C3F /* Leanplum-iOS-Location */,
+				1F9625893AC8683183CA7B3C5B969750 /* Leanplum-iOS-SDK */,
+				1D34C3A108C0AABA2A1B3A71865B905D /* Leanplum-iOS-UIEditor */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -82,10 +122,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				73168592F8F7910D8BD1CBC48E8B020C /* Pods */,
+				575E40B033243342E1CEDD1980166370 /* Pods */,
 				911CCE908868645D878CBF5542BEFC5D /* Products */,
 				A412963957CA021DBE05DBF226A5EDAB /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		7FC4D50E24D49509C03F0E1D75983C3F /* Leanplum-iOS-Location */ = {
+			isa = PBXGroup;
+			children = (
+				1422A7EEBD846CFA0CDB9749361E2491 /* Frameworks */,
+			);
+			path = "Leanplum-iOS-Location";
 			sourceTree = "<group>";
 		};
 		911CCE908868645D878CBF5542BEFC5D /* Products */ = {
@@ -94,14 +142,6 @@
 				1D3566830851DE3284C8974B66B4704C /* Pods_photoStories.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		95155327F661A580A220B61B62B7CCC1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B663E557C44A7E59009250BA626466A7 /* Leanplum.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A412963957CA021DBE05DBF226A5EDAB /* Targets Support Files */ = {
@@ -120,14 +160,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C28465350EECD87FB490E53642B095A9 /* Leanplum-iOS-SDK */ = {
+		E2C103B11BF48927B09256340A7612F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				70366FF71611FDF3F52F6618CFD3480B /* Leanplum.h */,
-				BF03A4CB6441CC59E9B726AFAD6835D7 /* LPInbox.h */,
-				95155327F661A580A220B61B62B7CCC1 /* Frameworks */,
+				8B5614A71658A9E217A01C88EB2C8BAC /* Leanplum.framework */,
 			);
-			path = "Leanplum-iOS-SDK";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

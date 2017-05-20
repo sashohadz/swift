@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2235222C70FF5AFA560BA00D /* Pods_photoStories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */; };
+		A5042EDA1EAE6871001AC72B /* gas.png in Resources */ = {isa = PBXBuildFile; fileRef = A5042ED51EAE6871001AC72B /* gas.png */; };
 		A55E51941E7C324600E648F9 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55E51931E7C324600E648F9 /* MessagesTableViewController.swift */; };
-		A57396DA1E77E595002EFA57 /* track1.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D41E77E595002EFA57 /* track1.png */; };
-		A57396DB1E77E595002EFA57 /* track2.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D51E77E595002EFA57 /* track2.png */; };
-		A57396DC1E77E595002EFA57 /* track3.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D61E77E595002EFA57 /* track3.png */; };
-		A57396DD1E77E595002EFA57 /* track4.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D71E77E595002EFA57 /* track4.png */; };
-		A57396DE1E77E595002EFA57 /* track5.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D81E77E595002EFA57 /* track5.png */; };
-		A57396DF1E77E595002EFA57 /* track6.png in Resources */ = {isa = PBXBuildFile; fileRef = A57396D91E77E595002EFA57 /* track6.png */; };
+		A5A9CFD01EBA45EB005F008B /* card.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CFCB1EBA45EB005F008B /* card.png */; };
+		A5A9CFD11EBA45EB005F008B /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CFCC1EBA45EB005F008B /* moon.png */; };
+		A5A9CFD21EBA45EB005F008B /* places.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CFCD1EBA45EB005F008B /* places.png */; };
+		A5A9CFD31EBA45EB005F008B /* rewards.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CFCE1EBA45EB005F008B /* rewards.png */; };
+		A5A9CFD41EBA45EB005F008B /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A9CFCF1EBA45EB005F008B /* star.png */; };
 		A5CC3B551E5C320C00F53146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B541E5C320C00F53146 /* AppDelegate.swift */; };
 		A5CC3B571E5C320C00F53146 /* ApplicationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B561E5C320C00F53146 /* ApplicationContainer.swift */; };
 		A5CC3B5A1E5C320C00F53146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5CC3B581E5C320C00F53146 /* Main.storyboard */; };
@@ -29,19 +29,18 @@
 		A5CC3B731E5C3B6400F53146 /* DBCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B721E5C3B6400F53146 /* DBCommunication.swift */; };
 		A5CC3B781E5C3EE800F53146 /* DataKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC3B771E5C3EE800F53146 /* DataKeys.swift */; };
 		A5FE7B5A1E5CD3A100253B8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FE7B591E5CD3A100253B8A /* DetailViewController.swift */; };
-		A5FE7B681E5CDE7800253B8A /* plum.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FE7B671E5CDE7800253B8A /* plum.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		834E6AC1D9BEEEF1520B5F85 /* Pods_photoStories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photoStories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CDD77EC486BCEBE99E7B603 /* Pods-photoStories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoStories.release.xcconfig"; path = "Pods/Target Support Files/Pods-photoStories/Pods-photoStories.release.xcconfig"; sourceTree = "<group>"; };
+		A5042ED51EAE6871001AC72B /* gas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gas.png; sourceTree = "<group>"; };
 		A55E51931E7C324600E648F9 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
-		A57396D41E77E595002EFA57 /* track1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track1.png; sourceTree = "<group>"; };
-		A57396D51E77E595002EFA57 /* track2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track2.png; sourceTree = "<group>"; };
-		A57396D61E77E595002EFA57 /* track3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track3.png; sourceTree = "<group>"; };
-		A57396D71E77E595002EFA57 /* track4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track4.png; sourceTree = "<group>"; };
-		A57396D81E77E595002EFA57 /* track5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track5.png; sourceTree = "<group>"; };
-		A57396D91E77E595002EFA57 /* track6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = track6.png; sourceTree = "<group>"; };
+		A5A9CFCB1EBA45EB005F008B /* card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card.png; sourceTree = "<group>"; };
+		A5A9CFCC1EBA45EB005F008B /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
+		A5A9CFCD1EBA45EB005F008B /* places.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = places.png; sourceTree = "<group>"; };
+		A5A9CFCE1EBA45EB005F008B /* rewards.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rewards.png; sourceTree = "<group>"; };
+		A5A9CFCF1EBA45EB005F008B /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		A5CC3B511E5C320C00F53146 /* photoStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photoStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CC3B541E5C320C00F53146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5CC3B561E5C320C00F53146 /* ApplicationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContainer.swift; sourceTree = "<group>"; };
@@ -59,7 +58,6 @@
 		A5CC3B771E5C3EE800F53146 /* DataKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataKeys.swift; sourceTree = "<group>"; };
 		A5E627221E8A7611001CCFDF /* photoStories.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = photoStories.entitlements; sourceTree = "<group>"; };
 		A5FE7B591E5CD3A100253B8A /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A5FE7B671E5CDE7800253B8A /* plum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plum.png; sourceTree = "<group>"; };
 		ACB91358FC4C8680D2B73C1B /* Pods-photoStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photoStories.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photoStories/Pods-photoStories.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,13 +134,12 @@
 		A5CC3B761E5C3BA700F53146 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				A57396D41E77E595002EFA57 /* track1.png */,
-				A57396D51E77E595002EFA57 /* track2.png */,
-				A57396D61E77E595002EFA57 /* track3.png */,
-				A57396D71E77E595002EFA57 /* track4.png */,
-				A57396D81E77E595002EFA57 /* track5.png */,
-				A57396D91E77E595002EFA57 /* track6.png */,
-				A5FE7B671E5CDE7800253B8A /* plum.png */,
+				A5A9CFCB1EBA45EB005F008B /* card.png */,
+				A5A9CFCC1EBA45EB005F008B /* moon.png */,
+				A5A9CFCD1EBA45EB005F008B /* places.png */,
+				A5A9CFCE1EBA45EB005F008B /* rewards.png */,
+				A5A9CFCF1EBA45EB005F008B /* star.png */,
+				A5042ED51EAE6871001AC72B /* gas.png */,
 				A5CC3B6E1E5C355500F53146 /* bookmarkSet.png */,
 				A5CC3B6F1E5C355500F53146 /* bookmarkSetDefault.png */,
 			);
@@ -220,18 +217,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5A9CFD11EBA45EB005F008B /* moon.png in Resources */,
+				A5A9CFD31EBA45EB005F008B /* rewards.png in Resources */,
 				A5CC3B701E5C355500F53146 /* bookmarkSet.png in Resources */,
 				A5CC3B5F1E5C320C00F53146 /* LaunchScreen.storyboard in Resources */,
 				A5CC3B711E5C355500F53146 /* bookmarkSetDefault.png in Resources */,
-				A5FE7B681E5CDE7800253B8A /* plum.png in Resources */,
-				A57396DD1E77E595002EFA57 /* track4.png in Resources */,
-				A57396DA1E77E595002EFA57 /* track1.png in Resources */,
+				A5A9CFD41EBA45EB005F008B /* star.png in Resources */,
+				A5A9CFD01EBA45EB005F008B /* card.png in Resources */,
 				A5CC3B5C1E5C320C00F53146 /* Assets.xcassets in Resources */,
-				A57396DF1E77E595002EFA57 /* track6.png in Resources */,
-				A57396DE1E77E595002EFA57 /* track5.png in Resources */,
-				A57396DC1E77E595002EFA57 /* track3.png in Resources */,
-				A57396DB1E77E595002EFA57 /* track2.png in Resources */,
+				A5A9CFD21EBA45EB005F008B /* places.png in Resources */,
 				A5CC3B5A1E5C320C00F53146 /* Main.storyboard in Resources */,
+				A5042EDA1EAE6871001AC72B /* gas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +397,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -424,11 +421,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = photoStories/photoStories.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = photoStories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourseSasho.photoStories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -439,11 +440,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = photoStories/photoStories.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 4XLWYATZ5P;
 				INFOPLIST_FILE = photoStories/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftCourseSasho.photoStories;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

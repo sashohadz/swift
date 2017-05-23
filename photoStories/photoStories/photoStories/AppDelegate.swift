@@ -23,13 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        #if DEBUG
-            Leanplum.setAppId("app_",
-                              withDevelopmentKey:"dev_")
-        #else
-            Leanplum.setAppId("app_",
-                              withProductionKey: "prod_")
-        #endif
+//        #if DEBUG
+//            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
+//                              withDevelopmentKey:"dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI")
+//        #else
+            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
+                              withProductionKey:"prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ")
+//        #endif
         
         LeanplumUIEditor.shared().allowInterfaceEditing()
         

@@ -18,11 +18,13 @@ class MessagesTableViewController: UITableViewController {
         Leanplum.inbox().onChanged {
             self.inboxMessages = Leanplum.inbox().allMessages() as! [LPInboxMessage]
             self.tableView.reloadData()
+            print("Inbox onChanged")
         }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        print("view will appear")
     }
 
     override func didReceiveMemoryWarning() {

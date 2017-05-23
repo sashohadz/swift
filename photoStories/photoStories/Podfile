@@ -6,6 +6,6 @@ target 'photoStories' do
   use_frameworks!
   pod 'Leanplum-iOS-SDK'
   pod 'Leanplum-iOS-Location'
-#  pod 'Leanplum-iOS-UIEditor'
+  pod 'Leanplum-iOS-UIEditor'
 
 end

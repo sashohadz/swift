@@ -23,6 +23,7 @@ class MessagesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        // not really needed - Push segue is used to present the tableViewController
         self.tableView.reloadData()
         print("view will appear")
     }

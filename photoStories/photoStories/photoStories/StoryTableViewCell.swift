@@ -26,7 +26,8 @@ class StoryTableViewCell: UITableViewCell {
             switch isBookmarked {
             case true:
                 self.storyImageView.layer.borderWidth = 4.0
-                self.storyImageView.layer.borderColor = UIColor.green.cgColor
+                let bookMarkdColor = UIColor(colorLiteralRed: 0.51, green: 0.87, blue: 0.78, alpha: 0.4)
+                self.storyImageView.layer.borderColor = bookMarkdColor.cgColor
             case false:
                 self.storyImageView.layer.borderWidth = 0.0
             default:

@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     var profileImage = LPVar.define("loginImage", withFile: "plum")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+    
 //        #if DEBUG
 //            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
 //                              withDevelopmentKey:"dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI")
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
                               withProductionKey:"prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ")
 //        #endif
+
         
         LeanplumUIEditor.shared().allowInterfaceEditing()
         

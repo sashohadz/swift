@@ -76,7 +76,6 @@ class StoriesTableViewController: UITableViewController, StoryTableViewCellDeleg
         let storyShortText = selectedCell.storyDetailLabel.text
         print("Track Selected item with item: \(storyShortText ?? "")")
         Leanplum.track("Selected item", withValue: Double(selectedCell.isBookmarked.hashValue), andParameters: ["item":storyShortText!])
-//        Leanplum.setUserAttributes(["age": NSNull(), "gender": NSNull()])
         self.performSegue(withIdentifier: "ToStoryDetailsSegue", sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

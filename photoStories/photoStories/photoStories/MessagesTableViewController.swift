@@ -17,16 +17,9 @@ class MessagesTableViewController: UITableViewController {
         super.viewDidLoad()
         Leanplum.inbox().onChanged {
             self.inboxMessages = Leanplum.inbox().allMessages() as! [LPInboxMessage]
+            self.inboxMessages.reverse()
             self.tableView.reloadData()
-            print("Inbox onChanged")
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        // not really needed - Push segue is used to present the tableViewController
-        // so viewDidLoad is called every time.
-        self.tableView.reloadData()
-        print("view will appear")
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,21 +33,44 @@ class MessagesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.inboxMessages.count
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let message: LPInboxMessage = self.inboxMessages[row]
+        if (!message.isRead()) {
+            cell.setHighlighted(true, animated: true)
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
+        let unreadColor = UIColor(colorLiteralRed: 0.51, green: 0.87, blue: 0.78, alpha: 0.4)
+        let selectedView = UIView()
+        selectedView.backgroundColor = unreadColor
+        cell.selectedBackgroundView = selectedView
+        
         let row = indexPath.row
         let message: LPInboxMessage = self.inboxMessages[row]
+        
         let title = message.title()
         cell.textLabel?.text = title
+        
         let subtitle = message.subtitle()
         cell.detailTextLabel?.text = subtitle
-        print(message.messageId())
+        
+        if let imageFilePath = message.imageFilePath() {
+             cell.imageView?.image = UIImage(contentsOfFile: imageFilePath)
+        }
+        
+        print("Showing Inbox message with: id##instanceId \(message.messageId())")
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.inboxMessages[indexPath.row].read()
+        let messageAtRow = self.inboxMessages[indexPath.row]
+        let title = messageAtRow.title()
+        let text = messageAtRow.subtitle()
+        presentMessage(title: title!, text: text!, inboxMessageId: messageAtRow)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -65,5 +81,15 @@ class MessagesTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
+    }
+    
+    func presentMessage(title: String, text: String, inboxMessageId: LPInboxMessage) {
+        let alertController = UIAlertController(title: title, message: text, preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "Got it!", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+            inboxMessageId.read()
+            print("OK, message with id \(inboxMessageId.messageId()) is now marked as read")
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

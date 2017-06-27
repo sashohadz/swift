@@ -30,9 +30,13 @@ class ApplicationContainer: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if userLoggedIn == true {
+            let initialVc = storyboard?.instantiateViewController(withIdentifier: "mainNavController")
+            UIApplication.shared.keyWindow?.rootViewController = initialVc
             self.performSegue(withIdentifier: "ToMainScreenSegue", sender: nil)
         }
         else {
+            let initialVc = storyboard?.instantiateViewController(withIdentifier: "loginNavController")
+            UIApplication.shared.keyWindow?.rootViewController = initialVc
             self.performSegue(withIdentifier: "ToLoginScreenSegue", sender: nil)
         }
     }

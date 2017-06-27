@@ -36,5 +36,6 @@ class DetailViewController: UIViewController {
     
     @IBAction func whatsNewButtonPressed(_ sender: UIButton) {
         Leanplum.track("News")
+        Leanplum.setUserAttributes(["Subscribed for News":"Yes"])
     }
 }

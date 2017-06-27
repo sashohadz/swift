@@ -13,6 +13,9 @@ import UIKit
 import Leanplum
 import LeanplumUIEditor
 
+fileprivate let viewActionIdentifier = "VIEW_IDENTIFIER"
+fileprivate let newsCategoryIdentifier = "NEWS_CATEGORY"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
@@ -20,17 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
     var profileImage = LPVar.define("loginImage", withFile: "plum")
-    
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    
-//        #if DEBUG
-//            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
-//                              withDevelopmentKey:"dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI")
-//        #else
-            Leanplum.setAppId("app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4",
-                              withProductionKey:"prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ")
-//        #endif
 
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+        let appId = "app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4"
+        let devKey = "dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI"
+        let prodkey = "prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ"
+        
+        #if DEBUG
+            Leanplum.setAppId(appId, withDevelopmentKey:devKey)
+        #else
+            Leanplum.setAppId(appId, withProductionKey:prodkey)
+        #endif
         
         LeanplumUIEditor.shared().allowInterfaceEditing()
         
@@ -39,42 +45,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         configureUserNotifications()
         
         Leanplum.start()
+        
         Leanplum.onStartResponse{ (success:Bool) in
-            print("Start call resposne Success")
+            print("Got a Start call response Success: \(success)")
         }
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+        
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
     {
-        print("Error = ",error.localizedDescription)
+        print("Failed to register: \(error)")
     }
 
     func configureUserNotifications(){
         
         if #available(iOS 10.0, *) {
             print("IOS 10 push registration")
-            let userNotifCenter = UNUserNotificationCenter.current()
-            userNotifCenter.delegate = self
             
-            userNotifCenter.requestAuthorization(options: [.sound, .alert, .badge]) { (granted,error) in
+            UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge]) { (granted,error) in
                 if error == nil {
-                    UIApplication.shared.registerForRemoteNotifications()
+                    print("Permission granted: \(granted)")
+                    guard granted else { return }
+                    // 1
+                    let viewAction = UNNotificationAction(identifier: viewActionIdentifier,
+                                                          title: "View",
+                                                          options: [.foreground])
+                    
+                    // 2
+                    let newsCategory = UNNotificationCategory(identifier: newsCategoryIdentifier,
+                                                              actions: [viewAction],
+                                                              intentIdentifiers: [],
+                                                              options: [])
+                    UNUserNotificationCenter.current().setNotificationCategories([newsCategory])
+                    
+                    self.getNotificationSettings()
                 } else {
                     print(error?.localizedDescription ?? "Error while registering push")
                 }
@@ -90,5 +103,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             UIApplication.shared.registerForRemoteNotifications()
         }
     }
+    
+    func getNotificationSettings() {
+        UNUserNotificationCenter.current().getNotificationSettings { (settings) in
+            print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let userInfo = response.notification.request.content.userInfo
+        let messageTitle = userInfo["aps"] as! [String: AnyObject]
+        print(messageTitle.description)
+        
+        if response.actionIdentifier == viewActionIdentifier {
+            print("\(viewActionIdentifier) was pressed")
+        }
+        completionHandler()
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
+        print("did receive remote notification \(userInfo)")
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("did receive remote notification completionHandler \(userInfo)")
+    }
 }
+
 

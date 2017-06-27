@@ -328,7 +328,7 @@
                                 </state>
                                 <connections>
                                     <action selector="whatsNewButtonPressed:" destination="51t-fj-Vj1" eventType="touchUpInside" id="Eh4-th-D6B"/>
-                                    <segue destination="6LQ-Jx-0F7" kind="show" id="XUt-np-r62"/>
+                                    <segue destination="6LQ-Jx-0F7" kind="showDetail" action="showViewController:sender:" id="XUt-np-r62"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Tr-Ag-k8U">
@@ -441,10 +441,10 @@
             </objects>
             <point key="canvasLocation" x="3644" y="139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Nav Controller-->
         <scene sceneID="ejF-lK-AMo">
             <objects>
-                <navigationController id="9UJ-YD-guf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNavController" id="9UJ-YD-guf" customClass="MainNavController" customModule="photoStories" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gOZ-bT-T08">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -457,10 +457,10 @@
             </objects>
             <point key="canvasLocation" x="1012" y="139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Login Nav Controller-->
         <scene sceneID="F6T-db-Ymq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RGW-2E-ksG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavController" automaticallyAdjustsScrollViewInsets="NO" id="RGW-2E-ksG" customClass="LoginNavController" customModule="photoStories" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rlp-Dr-NkQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -473,7 +473,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qdA-4W-CHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-642" y="859"/>
+            <point key="canvasLocation" x="-642" y="881"/>
         </scene>
     </scenes>
     <resources>
@@ -483,6 +483,6 @@
         <image name="rewards.png" width="260" height="260"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="neM-eC-FV7"/>
+        <segue reference="DhB-I2-q6E"/>
     </inferredMetricsTieBreakers>
 </document>

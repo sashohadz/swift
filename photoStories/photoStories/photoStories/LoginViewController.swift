@@ -63,6 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         formatter.timeZone = pdt
         let LoginDateString = formatter.string(from: Date())
         print("Track Login with date: \(LoginDateString)")
+        Leanplum.setUserAttributes(["percentTest":90])
         
         guard usernameTextField.text!.characters.count > 0 else {
             let alert = UIAlertController.init(title: "Error", message: "Please enter a username", preferredStyle: .alert)

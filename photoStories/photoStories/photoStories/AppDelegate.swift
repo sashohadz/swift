@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
     var profileImage = LPVar.define("loginImage", withFile: "plum")
+    var myArrayVar = LPVar.define("myArrayVarName",with: ["Sasho1","Sasho2"])
+    var lpEventAttributeArr : LPVar!
+    var myDictionaryVar = LPVar.define("myDictionaryVarName", with: ["1" : "Sasho1","2" : "Sasho2"])
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -52,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenParts = deviceToken.map { data -> String in
             return String(format: "%02.2hhx", data)
@@ -115,10 +120,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        let userInfo = response.notification.request.content.userInfo
-        let messageTitle = userInfo["aps"] as! [String: AnyObject]
-        print(messageTitle.description)
         
         if response.actionIdentifier == viewActionIdentifier {
             print("\(viewActionIdentifier) was pressed")

@@ -12,7 +12,7 @@ import UIKit
 #endif
 import Leanplum
 import LeanplumUIEditor
-
+//TO DO:
 fileprivate let viewActionIdentifier = "VIEW_IDENTIFIER"
 fileprivate let newsCategoryIdentifier = "NEWS_CATEGORY"
 
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     var welcomeMessage = LPVar.define("welcomeMessage",with: "Welcome to Leanplum!")
     var profileImage = LPVar.define("loginImage", withFile: "plum")
-    var myArrayVar = LPVar.define("myArrayVarName",with: ["Sasho1","Sasho2"])
+    let myArrayVar = LPVar.define("myArrayVarName",with: ["Sasho1","Sasho2"])
     var lpEventAttributeArr : LPVar!
     var myDictionaryVar = LPVar.define("myDictionaryVarName", with: ["1" : "Sasho1","2" : "Sasho2"])
 
@@ -32,17 +32,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         UNUserNotificationCenter.current().delegate = self
         
-        let appId = "app_Ct6WcCuzwLPZwDGwLFg3bc8A0VxKEEMbLuXBr6PvNK4"
-        let devKey = "dev_WfRQHaMVNkKSNW015fgejFyborCNXdwAQrsC2LEaGPI"
-        let prodkey = "prod_HySDSeoN8GshFmTRFlnThakIth5M15C6Hnu2qJv70iQ"
-        
+        let appId = "app_"
+        let devKey = "dev_"
+        let prodkey = "prod_"
+   
         #if DEBUG
             Leanplum.setAppId(appId, withDevelopmentKey:devKey)
         #else
             Leanplum.setAppId(appId, withProductionKey:prodkey)
         #endif
-        
-        LeanplumUIEditor.shared().allowInterfaceEditing()
         
         Leanplum.setVerboseLoggingInDevelopmentMode(true)
         
@@ -55,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         return true
     }
-    
 
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         let tokenParts = deviceToken.map { data -> String in
@@ -117,22 +114,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                didReceive response: UNNotificationResponse,
-                                withCompletionHandler completionHandler: @escaping () -> Void) {
-        
-        if response.actionIdentifier == viewActionIdentifier {
-            print("\(viewActionIdentifier) was pressed")
-        }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+// TO DO:
+//        if response.actionIdentifier == viewActionIdentifier {
+//            print("\(viewActionIdentifier) was pressed")
+//        }
         completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        print("Will Present Notification \(notification.request.content.userInfo)")
+        // Play a sound.
+        completionHandler(UNNotificationPresentationOptions.sound)
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         print("did receive remote notification \(userInfo)")
-    }
-    
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("did receive remote notification completionHandler \(userInfo)")
     }
 }
 

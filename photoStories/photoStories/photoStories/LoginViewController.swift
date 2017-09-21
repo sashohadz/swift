@@ -33,11 +33,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             NSLog((appDelegate.welcomeMessage?.stringValue())!)
         }
 
-        Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"one"])
+//        Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"one"])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        Leanplum.advance(to: nil)
+//        Leanplum.advance(to: nil)
     }
 
     override func didReceiveMemoryWarning() {

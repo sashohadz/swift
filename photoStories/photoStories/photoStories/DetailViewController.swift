@@ -19,7 +19,8 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let unreadCount = Leanplum.inbox().unreadCount()
+//        let unreadCount = Leanplum.inbox().unreadCount()
+        let unreadCount = Leanplum.inbox().unreadCount;
         let allMessagesCount = Leanplum.inbox().count()
         self.unreadLabel.text = String(unreadCount)
         self.readLabel.text = String(allMessagesCount)
@@ -27,7 +28,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Leanplum.forceContentUpdate()
+//        Leanplum.forceContentUpdate()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,5 +38,6 @@ class DetailViewController: UIViewController {
     @IBAction func whatsNewButtonPressed(_ sender: UIButton) {
         Leanplum.track("News")
         Leanplum.setUserAttributes(["Subscribed for News":"Yes"])
+        print(["Subscribed for News":"Yes"])
     }
 }

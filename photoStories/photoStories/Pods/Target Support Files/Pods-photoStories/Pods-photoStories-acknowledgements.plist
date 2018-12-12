@@ -15,16 +15,10 @@
 		<dict>
 			<key>FooterText</key>
 			<string>See https://www.leanplum.com/tos</string>
+			<key>License</key>
+			<string>Commercial</string>
 			<key>Title</key>
 			<string>Leanplum-iOS-SDK</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
-			<string>See https://www.leanplum.com/tos</string>
-			<key>Title</key>
-			<string>Leanplum-iOS-UIEditor</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

@@ -30,14 +30,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         Leanplum.onVariablesChanged {
             self.logoImageView.image = appDelegate.profileImage?.imageValue()
-            NSLog((appDelegate.welcomeMessage?.stringValue())!)
+            NSLog((appDelegate.welcomeMessage?.stringValue)!)
         }
-
-//        Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"one"])
+//        Leanplum.setUserAttributes(["dateFormatTest":"20180319"])
+        Leanplum.advance(to: "LoginScreenState", withParameters: ["LoginStateParamOne":"ValueOne"])
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-//        Leanplum.advance(to: nil)
+        Leanplum.advance(to: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,14 +62,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let pdt = TimeZone(abbreviation: "PDT")
         formatter.timeZone = pdt
         let LoginDateString = formatter.string(from: Date())
-        print("Track Login with date: \(LoginDateString)")
-        Leanplum.setUserAttributes(["percentTest":90])
-        
+
         guard usernameTextField.text!.characters.count > 0 else {
             let alert = UIAlertController.init(title: "Error", message: "Please enter a username", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
-            
             return
         }
         
